@@ -1,0 +1,253 @@
+<html>
+   <head>
+      <title>Card List</title>
+      <meta name="viewport" content="device=width-device, initial-scale=1.0">
+      <script src="https://kit.fontawesome.com/d17dd9fe1a.js" crossorigin="anonymous"></script>
+      <link href="style.css" rel="stylesheet">
+      <style>
+     @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+      body {
+         background-color: #F1F2F7;
+         font-family: 'Roboto', sans-serif;
+      }
+
+      .container {
+         max-width: 1200px;
+         margin: auto;
+      }
+
+      .wrap {
+         display: flex;
+         justify-content: space-evenly;
+         flex-wrap: wrap;
+      }
+
+      .card {
+         max-width: 540px;
+         width: 100%;
+         background-color: #fff;
+         margin: 20px 10px;
+         display: flex;
+         justify-content: space-between;
+      }
+
+      .card .profile {
+         display: inline-block;
+         margin: 5px auto 10px;
+         color: #000000;
+         font-weight: 400;
+         border-radius: 3px;
+         font-size: 16px;
+      }
+
+      .card .profile:hover {
+         background-color: #ff4159;
+      }
+
+      .card .profile-img {
+         display: inline-block;
+         width: 100%;
+         height: 100%;
+         overflow: hidden;
+         max-width: 265px;
+      }
+
+      .card .profile-img img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+
+      .card .info {
+         padding: 10px 30px;
+      }
+
+      .card .name {
+         font-size: 22px;
+         margin: 20px auto 0;
+      }
+
+      .card p {
+         color: #6f7495;
+         line-height: 1.6;
+      }
+
+      .card .social ul {
+         padding: 0;
+         display: flex;
+         list-style-type: none;
+      }
+
+      .card .social {
+         margin-top: 25px;
+      }
+
+      .card .social ul li {
+         width: 40px;
+         height: 40px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         border-radius: 50%;
+         overflow: hidden;
+         margin: 5px;
+         background: rgb(110 79 246 / 20%);
+      }
+
+      .card .social i {
+         margin: 0 10px;
+         color: rgb(110 79 246 / 65%);
+      }
+
+      .card .social ul li:hover {
+         background-color: #6E4FF6;
+      }
+
+      .card .social li:hover i {
+         color: #fff;
+      }
+      </style>
+   </head>
+   <body>
+      <div class="container">
+         <div class="wrap">
+            <div class="card">
+               <div class="profile-img">
+                  <img src="images/speaker1.jpg">
+               </div>
+               <div class="info">
+                  <h4 class="name">Jason Bown</h4>
+                  <h5 class="profile">Web Developer</h5>
+                  <p>Nullam blandit hendrerit faucibus. Suspendisse hendrerit turpis dui Sed ac velit iaculis.</p>
+                  <div class="social">
+                     <ul>
+                        <li>
+                           <a href="#">
+                           <i class="fa fa-envelope"></i>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#">
+                           <i class="fa fa-facebook"></i>
+                           </a>
+                        </li>
+                        <li>    
+                           <a href="#">
+                           <i class="fa fa-twitter"></i>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#">
+                           <i class="fa fa-github"></i>                    
+                           </a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="card">
+               <div class="profile-img">
+                  <img src="images/speaker2.jpg">
+               </div>
+               <div class="info">
+                  <h4 class="name">Matt Kimel</h4>
+                  <h5 class="profile">Web Developer</h5>
+                  <p>Nullam blandit hendrerit faucibus. Suspendisse hendrerit turpis dui Sed ac velit iaculis.</p>
+                  <div class="social">
+                     <ul>
+                        <li>
+                           <a href="#">
+                           <i class="fa fa-envelope"></i>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#">
+                           <i class="fa fa-facebook"></i>
+                           </a>
+                        </li>
+                        <li>    
+                           <a href="#">
+                           <i class="fa fa-twitter"></i>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#">
+                           <i class="fa fa-github"></i>                    
+                           </a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="card">
+               <div class="profile-img">
+                  <img src="images/speaker3.jpg">
+               </div>
+               <div class="info">
+                  <h4 class="name">Douglus Khundu</h4>
+                  <h5 class="profile">Web Developer</h5>
+                  <p>Nullam blandit hendrerit faucibus. Suspendisse hendrerit turpis dui Sed ac velit iaculis.</p>
+                  <div class="social">
+                     <ul>
+                        <li>
+                           <a href="#">
+                           <i class="fa fa-envelope"></i>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#">
+                           <i class="fa fa-facebook"></i>
+                           </a>
+                        </li>
+                        <li>    
+                           <a href="#">
+                           <i class="fa fa-twitter"></i>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#">
+                           <i class="fa fa-github"></i>                    
+                           </a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="card">
+               <div class="profile-img">
+                  <img src="images/speaker4.jpg">
+               </div>
+               <div class="info">
+                  <h4 class="name">Bin Daisel</h4>
+                  <h5 class="profile">Web Developer</h5>
+                  <p>Nullam blandit hendrerit faucibus. Suspendisse hendrerit turpis dui Sed ac velit iaculis.</p>
+                  <div class="social">
+                     <ul>
+                        <li>
+                           <a href="#">
+                           <i class="fa fa-envelope"></i>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#">
+                           <i class="fa fa-facebook"></i>
+                           </a>
+                        </li>
+                        <li>    
+                           <a href="#">
+                           <i class="fa fa-twitter"></i>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#">
+                           <i class="fa fa-github"></i>                    
+                           </a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>Multiples Boxes with Read More Less</title>
+        <meta name="viewport" content="device=width-device, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/d17dd9fe1a.js" crossorigin="anonymous"></script>
+        <link href="style.css" rel="stylesheet">
+    </head>
+<body>
+    <section>
+        <div class="container">
+            <div class="wrap">
+                <div class="card">
+                    <div class="imageBox">
+                        <img src="1.svg">
+                    </div>
+                    <div class="text">
+                        <h3>Web and Mobile Development</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt sequi pariatur aspernatur harum in voluptatem, reiciendis at soluta numquam aut alias, tenetur nihil sunt? Magnam modi et omnis doloribus facere.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt sequi pariatur aspernatur harum in voluptatem, reiciendis at soluta numquam aut alias, tenetur nihil sunt? Magnam modi et omnis doloribus facere.</p>
+                    </div>
+                    <a class="btn btn-primary more"></a>
+                </div>
+                <div class="card">
+                    <div class="imageBox">
+                        <img src="2.svg">
+                    </div>
+                    <div class="text">
+                        <h3>Customer Support</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt sequi pariatur aspernatur harum in voluptatem, reiciendis at soluta numquam aut alias, tenetur nihil sunt? Magnam modi et omnis doloribus facere.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt sequi pariatur aspernatur harum in voluptatem, reiciendis at soluta numquam aut alias, tenetur nihil sunt? Magnam modi et omnis doloribus facere.</p>
+                    </div>
+                    <a class="btn btn-primary more"></a>
+                </div>
+                <div class="card">
+                    <div class="imageBox">
+                        <img src="3.svg">
+                    </div>
+                    <div class="text">
+                        <h3>Analytics</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt sequi pariatur aspernatur harum in voluptatem, reiciendis at soluta numquam aut alias, tenetur nihil sunt? Magnam modi et omnis doloribus facere.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt sequi pariatur aspernatur harum in voluptatem, reiciendis at soluta numquam aut alias, tenetur nihil sunt? Magnam modi et omnis doloribus facere.</p>
+                    </div>
+                    <a class="btn btn-primary more"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let more = document.querySelectorAll('.more');
+        for (let i = 0; i < more.length; i++) {
+            more[i].addEventListener('click', function() {
+                more[i].parentNode.classList.toggle('active');
+            })
+        }
+     
+
+    </script>
+</body>
+</html>

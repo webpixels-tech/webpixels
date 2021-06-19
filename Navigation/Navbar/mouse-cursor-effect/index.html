@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Mouse cursor effect</title>
+        <meta name="viewport" content="device=width-device, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/d17dd9fe1a.js" crossorigin="anonymous"></script>
+        <link href="style.css" rel="stylesheet">
+    </head>
+<body>
+<section class="navbar">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+        <div class="cursor"></div>
+     </ul>
+</section>
+<script>
+    const cursor = document.querySelector('.cursor');
+    document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.pageX + 'px';
+            cursor.style.top = e.pageY + 'px';
+    })
+
+
+</script>
+</body>
+<html>

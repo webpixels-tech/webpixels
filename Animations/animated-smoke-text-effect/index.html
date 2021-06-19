@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Animated Smoke Text Effect</title>
+        <meta name="viewport" content="device=width-device, initial-scale=1.0">
+        <link href="style.css" rel="stylesheet">
+    </head>
+<body>
+<section>
+    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos maxime ab natus culpa eaque, similique ipsa tenetur eveniet sed aliquam voluptatum. Magni optio laborum obcaecati. Voluptatum molestias explicabo sequi eos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos maxime ab natus culpa eaque, similique ipsa tenetur eveniet sed aliquam voluptatum. Magni optio laborum obcaecati. Voluptatum molestias explicabo sequi eos. Voluptatum molestias explicabo sequi eos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos maxime ab natus culpa eaque, similique ipsa tenetur eveniet sed aliquam voluptatum. Magni optio laborum obcaecati. Voluptatum molestias explicabo sequi eos.</p>
+</section>
+
+<script>
+    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace - for reference
+    
+    const text = document.querySelector('.text');
+    text.innerHTML = text.textContent.replace(/\S/g, "<span>$&</span>");
+
+    const letters = document.querySelectorAll('span'); 
+    for (let i = 0; i < letters.length; i++) {
+        letters[i].addEventListener('mouseover', function(){
+            letters[i].classList.add('active');
+        })
+    }   
+
+</script>
+</body>
+</html>
