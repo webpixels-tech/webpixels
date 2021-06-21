@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: Roboto, sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+h2 {
+    margin-bottom: 0.7rem;
+}
+p {
+    line-height: 1.7;
+}
+section {
+    position: relative;
+    width: 100%;
+    display: block;
+    margin: auto;
+    background-color: #f3f3f3;
+}
+.container {
+    max-width: 1400px;
+    background: #fff;
+    padding: 10px;
+    margin: 10px auto;
+}
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.wrapper .card {
+    position: relative;
+    width: 600px;
+    height: 350px;
+    margin: 20px;
+    
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: linear-gradient(45deg, #1a2f3f, #7094ce);
+    transition: 0.5s;
+}
+.wrapper .card img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 400px;
+    transition: 0.5s;
+}
+.wrapper .card:hover img {
+    left: 75%;
+    height: 500px;
+
+}
+.wrapper .card .content {
+    position: relative;
+    width: 50%;
+    left: 20%;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+.wrapper .card:hover .content {
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+}
+.wrapper .card .content h2 {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 2.2em;
+    line-height: 1em;
+}
+.wrapper .card .content p {
+    color: #fff;
+}
+.wrapper .card .content a {
+    position: relative;
+    color: #111;
+    background: #fff;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 700;
+}
+@media (max-width: 991px) {
+    .wrapper .card {
+        max-width: 600px;
+        width: auto;
+        align-items: flex-start;
+    }
+    .wrapper .card:hover {
+        height: 600px;
+    }
+    .wrapper .card:hover img {
+        left: 50%;
+        height: 350px;
+    }
+    .wrapper .card .content {
+        width: 100%;
+        left: 0;
+        padding: 40px;
+    }
+}  
+@media (max-width: 767px) {
+    .wrapper .card {
+        margin: 40px 20px;
+    }
+}
+
+@media (max-width: 420px) {
+    .wrapper .card .content {
+        padding: 30px;
+    }
+    .wrapper .card:hover img {
+        left: 50%;
+        height: 350px;
+    }
+}
