@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Sidebar Navigation</title>
+        <meta name="viewport" content="device=width-device, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/d17dd9fe1a.js" crossorigin="anonymous"></script>
+        <link href="style.css" rel="stylesheet">
+    </head>
+<body>
+    <div id="toggle"></div>
+    <div id="sidebar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#blogs">Blog</a></li>
+            <li><a href="#career">Career</a></li>
+            <li><a href="#contact">Contact Us</a></li>            
+        </ul>
+    </div>
+    <section id ="home">Home</section>
+    <section id ="about">About</section>
+    <section id ="services">Services</section>
+    <section id ="blogs">Blog</section>
+    <section id ="career">Career</section>
+    <section id ="contact">Contact Us</section>
+    <script>
+        const toggle = document.getElementById('toggle');
+        const sidebar = document.getElementById("sidebar");
+        toggle.addEventListener('click', function(){
+            toggle.classList.toggle('active');
+            sidebar.classList.toggle('active');
+        })
+
+        document.onclick = function(e){
+            if(e.target.id !== 'sidebar' && e.target.id !== 'toggle') {
+                toggle.classList.remove('active');
+                sidebar.classList.remove('active');
+            }
+        }
+
+    </script>
+</body>
+</html>

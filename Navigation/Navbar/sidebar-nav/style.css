@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: Roboto, sans-serif;
+}
+body {
+    background: #001a25;
+    min-height: 100%;
+}
+#toggle {
+    position: fixed;
+    right: 20px;
+    background: #03a9f4;
+    width: 40px;
+    height: 40px;
+    top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s;
+}
+#toggle::before {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 1px;
+    background: #fff;
+    transform: translateY(-5px);
+}
+#toggle::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 1px;
+    background: #fff;
+    transform: translateY(5px);
+}
+#toggle.active::before {
+    transform: translateY(0px) rotate(45deg);
+}
+#toggle.active::after {
+    transform: translateY(0px) rotate(-45deg);
+}
+#sidebar {
+    position: fixed;
+    width: 250px;
+    height: 100vh;
+    background: #003147;
+    padding: 20px 0;
+    left: -300px;
+    transition: 0.5s;
+}
+
+#sidebar ul {
+    list-style-type: none;
+}
+#sidebar ul li {
+    padding: 15px 20px;
+}
+#sidebar ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 0px;
+}
+#sidebar ul li:hover  {
+    background-color: #03a9f4;
+}
+#sidebar.active {
+    left: 0;
+} 
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-transform: uppercase;
+    font-size: 11vw;
+    color: #ffffff1c;
+}
