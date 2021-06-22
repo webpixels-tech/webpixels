@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <title>Responsive Navbar</title>
+    <meta name="viewport" content="device=width-device, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d17dd9fe1a.js" crossorigin="anonymous"></script>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <header id="header">
+                <a href="#" class="logo">
+                    <img src="logo.png" alt="Web Pixels">
+                </a>
+                <div id="toggle"></div>
+                <div id="navbar">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Career</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </header>
+        </div>
+    </section>
+    <script>
+        const header = document.getElementById("header");
+        const toggle = document.getElementById("toggle");
+        const navbar = document.getElementById('navbar');
+        toggle.addEventListener('click', function() {
+            toggle.classList.toggle('active');
+            navbar.classList.toggle('active');
+        })
+
+
+        document.onclick = function(e) {
+            if (e.target.id !== 'header' && e.target.id !== 'toggle' && e.target.id !== 'navbar') {
+                toggle.classList.remove('active');
+                navbar.classList.remove('active');
+            }
+        }
+    </script>
+</body>
+
+</html>
