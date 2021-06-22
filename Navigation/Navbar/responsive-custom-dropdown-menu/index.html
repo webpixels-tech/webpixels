@@ -1,0 +1,96 @@
+<html>
+
+<head>
+    <title>Responsive Dropdown Menu</title>
+    <meta name="viewport" content="device=width-device, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d17dd9fe1a.js" crossorigin="anonymous"></script>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Topbar -->
+    <div class="topbar">
+        <div class="wrap">
+            <div class="address">
+                <p>UI/UX Components</p>
+            </div>
+
+            <div class="contact-email">
+                <p><i class="far fa-envelope"></i><a href="mailto:info@webpixels.tech">info@webpixels.tech</a></p>
+            </div>
+
+            <div class="contact-no">
+                <p><i class="fas fa-mobile-alt"></i><a href="tel:91-123456789">91-123456789</a></p>
+            </div>
+        </div>
+    </div>
+    <!-- // Topbar -->
+    <header>
+        <div class="wrap">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.png" title="Logo" alt="Web Pixels Logo">
+                </a>
+            </div>
+            <div id="toggle">
+            </div>
+            <div class="nav" id="navbar">
+                <ul>
+                    <li class="menu-item">
+                        <a href="index.html" class="menu-link">Home</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="about-us.html" class="menu-link">About Us</a>
+                    </li>
+                    <li class="menu-item dropdown">
+                        <a class="menu-link">Components</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Animation</a></li>
+                            <li><a href="#">Atoms</a></li>
+                            <li><a href="#">Auth Pages</a></li>
+                            <li><a href="#">Cards</a></li>
+                            <li><a href="#">Forms</a></li>
+                            <li><a href="#">Headings</a></li>
+                            <li><a href="#">Layouts</a></li>
+                            <li><a href="#">Lists</a></li>
+                            <li><a href="#">Navigation</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item dropdown">
+                        <a class="menu-link">Themes</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Landing Page</a></li>
+                            <li><a href="#">Agency Template</a></li>
+                            <li><a href="#">Email Template</a></li>
+                            <li><a href="#">Single Page</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <script>
+        const toggle = document.getElementById('toggle');
+        const header = document.querySelector('header');
+        const nav = document.querySelector('.nav')
+        toggle.addEventListener('click', function() {
+            toggle.classList.toggle('active');
+            nav.classList.toggle('active');
+        })
+
+        const navItem = document.querySelectorAll('header .nav ul .menu-item');
+        console.log(navItem);
+        makeActive = function() {
+            for (let i = 0; i < navItem.length; i++)
+                navItem[i].classList.remove('active');
+            this.classList.toggle('active');
+        };
+        for (let i = 0; i < navItem.length; i++)
+            navItem[i].addEventListener('mousedown', makeActive);
+    </script>
+</body>
+
+</html>
