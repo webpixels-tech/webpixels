@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Custom Modal</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #00000087;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            visibility: hidden;
+            opacity: 0;
+        }
+        
+        .modal-dialog {
+            max-width: 400px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            position: relative;
+        }
+        
+        .modal .modal-title {
+            margin: 0;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        
+        .modal-footer {
+            text-align: right;
+            margin: 30px 0 0;
+        }
+        
+        .modal .btn-close img {
+            width: 20px;
+            height: auto;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+        }
+        
+        button {
+            border: 0;
+            background-color: transparent;
+            padding: 10px 20px;
+            color: #000;
+            font-size: 20px;
+            outline: none;
+            cursor: pointer;
+        }
+        
+        button.btn-submit,
+        button.btn-primary {
+            background-color: #0066ff;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <button type="button" class="btn btn-primary" id="open-modal">
+                Open Modal
+            </button>
+
+            <div class="modal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Modal Title</h5>
+                            <div type="button" class="btn-close">
+                                <img src="https://image.flaticon.com/icons/png/512/748/748122.png">
+                            </div>
+                        </div>
+                        <div class="modal-body">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae illum, sequi dolorum in animi culpa quo quibusdam corporis a ut quidem facere non assumenda consectetur quos perferendis eligendi quisquam fugiat!</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn-cancel">Cancel</button>
+                            <button type="button" class="btn-submit">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
