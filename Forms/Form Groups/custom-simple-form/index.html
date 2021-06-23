@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form - Custom Simple Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Roboto, sans-serif;
+            background-color: #F4F6F8;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+        
+        .inner-wrap {
+            display: block;
+            max-width: 300px;
+            position: relative;
+            padding: 20px;
+        }
+        
+        .form-wrap {
+            background-color: #fff;
+            padding: 10px;
+        }
+        
+        .form--group {
+            margin: 20px auto;
+            width: 100%;
+            display: block;
+        }
+        
+        .form--control {
+            padding: 10px 10px;
+            border: 1px solid #000;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        
+        .form--group label {
+            display: block;
+            padding-bottom: 10px;
+        }
+        
+        .btn--submit {
+            background-color: #0066ff;
+            border: 0;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <section class="form-wrap">
+            <div class="inner-wrap">
+                <h1>Simple Form</h1>
+                <div class="form--group">
+                    <label>Name</label>
+                    <input type="text" class="form--control" name="name">
+                </div>
+                <div class="form--group">
+                    <label>Email</label>
+                    <input type="email" class="form--control" name="email">
+                </div>
+                <div class="form--group">
+                    <label>Phone Number</label>
+                    <input type="number" class="form--control" name="phone-number">
+                </div>
+                <div class="form--group">
+                    <label>Subject</label>
+                    <input type="text" class="form--control" name="subject">
+                </div>
+                <div class="form--group">
+                    <label>Message</label>
+                    <textarea class="form--control" name="messge" rows="5" cols="5"></textarea>
+                </div>
+                <div class="form--group">
+                    <button type="button" class="btn--submit" value="submit">Submit</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+
+</html>
