@@ -1,0 +1,368 @@
+:root {
+    --primary-color: #0000ef;
+    --text-light-blue: #19154c;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.6rem;
+    color: #202020;
+    line-height: 29px;
+}
+
+a {
+    color: var(--primary-color);
+}
+
+a:focus {
+    box-shadow: none;
+}
+
+button:focus {
+    box-shadow: none;
+}
+
+::selection {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+p {
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.logo {
+    max-height: 30px;
+    width: auto;
+}
+
+ul li {
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+ul li ul {
+    margin: 1rem;
+}
+
+ul li ul li {
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 1rem !important;
+    line-height: 2 !important;
+}
+
+.dot-style ul li ul li::before {
+    top: -7px;
+    font-size: 2rem;
+}
+
+h1 {
+    font-size: 3.4rem;
+    line-height: 2;
+}
+
+.font-36 {
+    font-size: 36px;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.fw-500 {
+    font-weight: 500;
+}
+
+.fw-500 {
+    font-weight: 600;
+}
+
+.fw-700 {
+    font-weight: 700;
+}
+
+.main-heading {
+    color: var(--text-light-blue);
+    font-weight: 700;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: 1.4rem;
+    padding: 1.2rem 3rem;
+    border-color: var(--primary-color);
+    border-radius: 5rem;
+    font-weight: 300;
+}
+
+.btn-outline {
+    color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    border: 2px solid;
+    border-radius: 5rem;
+    padding: 0rem 2.2rem !important;
+    line-height: 2.8;
+}
+
+.btn-fill {
+    background-color: #fff;
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
+.read-more-link {
+    color: #061541;
+    font-size: 1.8rem;
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+    font-weight: 500;
+    outline: none;
+    display: block;
+    padding-left: 0;
+}
+
+button:focus {
+    outline: none;
+}
+
+table {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    display: block;
+    width: 100%;
+}
+
+.data-table {
+    box-shadow: -1px 8px 8px 4px #efefef;
+    border-radius: 1rem;
+    border: 1px solid #d4d4d4;
+    margin-bottom: 4rem;
+}
+
+.data-table table th {
+    color: var(--text-light-blue);
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8;
+    padding-left: 2rem;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.data-table table thead,
+.data-table table tbody td {
+    text-align: center;
+}
+
+.data-table table thead th {
+    padding: 1.5rem 2rem;
+    vertical-align: top;
+}
+
+.data-table table thead th:first-child {
+    font-weight: 600;
+    vertical-align: top;
+    text-align: left;
+    font-size: 1.6rem;
+}
+
+.data-table table tbody tr {
+    line-height: 4rem;
+    border-color: transparent;
+}
+
+.data-table table tbody td {
+    color: #19154c;
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+.bg-light-gray {
+    background-color: #f5f5f5;
+}
+
+.blue-background {
+    background-color: var(--primary-color);
+}
+
+.sec-pad-sep {
+    padding: 7rem 0;
+}
+
+.accordion .accordion-header button {
+    color: var(--text-light-blue);
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 2rem;
+    background-color: #fff;
+    border: none;
+    border-radius: 1rem;
+}
+
+.accordion .accordion-item {
+    margin-bottom: 2rem;
+}
+
+.accordion .accordion-item .accordion-header {
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 1px 0px 10px #f9ecec;
+}
+
+.accordion .accordion-item .accordion-body {
+    background-color: #fff;
+    padding: 0rem 2rem 2rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    font-size: 14px;
+    color: #19154c;
+    font-weight: 500;
+    line-height: 2;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.accordion-item:first-of-type .accordion-button {
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+}
+
+.accordion-flush .accordion-item:first-of-type .accordion-button {
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+}
+
+
+/* header */
+
+.navbar {
+    line-height: 7rem;
+}
+
+.navbar .navbar-nav {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.navbar .navbar-brand {
+    font-weight: 500;
+    font-size: 3rem;
+    color: var(--primary-color);
+}
+
+.navbar .navbar-brand span {
+    font-size: 2.5rem;
+    margin-left: 0.5rem;
+}
+
+.navbar .nav-item .nav-link {
+    color: #000000;
+    font-weight: 500;
+}
+
+.navbar .nav-item {
+    padding: 0 1.5rem !important;
+    margin-bottom: 0px;
+}
+
+.navbar .border-bottom {
+    border-bottom: 2px solid #e6e6e6b0;
+}
+
+.banner {
+    padding: 4rem 0;
+}
+
+.banner p {
+    font-weight: 500;
+}
+
+.banner .scroll-down {
+    font-size: 2rem;
+    padding: 1px;
+    position: absolute;
+    left: 50%;
+    background-color: #fff;
+    color: var(--primary-color);
+    box-shadow: 1px 0px 10px #e6e6e6;
+    padding: 2rem 1.5rem;
+    border-radius: 3rem;
+    margin-top: -4rem;
+}
+
+.cta {
+    padding: 5rem 0;
+}
+
+.footer p {
+    padding-top: 2rem;
+}
+
+.accordion-button::after {
+    background-image: url("../img/arrow.svg");
+    width: 3rem;
+    height: 3rem;
+    background-size: 3rem;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url(../img/arrow.svg);
+}
+
+#more,
+#moreGuidlines,
+#moreAddGuidlines {
+    display: none;
+}
+
+.dot-style ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.dot-style ul li {
+    padding-left: 1em;
+    position: relative;
+}
+
+.dot-style ul li::before {
+    content: "• ";
+    color: var(--primary-color);
+    font-size: 3rem;
+    position: absolute;
+    left: -4px;
+    top: -2px;
+}
+
+@media screen and (max-width: 991px) {
+    .navbar {
+        line-height: 4.5rem;
+    }
+    .navbar .right {
+        display: none;
+    }
+    .navbar .nav-item.hidden {
+        display: block !important;
+    }
+}
