@@ -1,0 +1,591 @@
+<html>
+
+<head>
+    <title>
+        Resume Template Page
+    </title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        html {
+            font-size: 62.50%;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f2f5fa;
+            font-size: 1.4rem;
+            line-height: 2.4rem;
+            position: relative;
+            color: #262b33;
+            font-weight: 400;
+        }
+        
+        .resume {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .resume .topbar {
+            text-align: center;
+            padding: 1rem 0;
+        }
+        
+        .resume .main-wrapper {
+            position: relative;
+            overflow: hidden;
+            border-radius: 6px;
+            box-shadow: 0 20px 60px 0 rgb(186 200 227 / 10%), 0 16px 36px 0 rgb(186 200 227 / 30%);
+            background-color: #fff;
+            padding: 4rem;
+        }
+        
+        .resume .main-header {
+            margin-bottom: 3rem;
+        }
+        
+        .resume .name {
+            font-size: 5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        
+        .resume .main-heading {
+            font-size: 25px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding-bottom: 9px;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        
+        .resume .main-heading::after {
+            content: '';
+            height: 3px;
+            background-color: black;
+            width: 20%;
+            left: 0;
+            bottom: 0;
+            position: absolute;
+        }
+        
+        .resume hr {
+            border-top: 0.15rem solid #cacaca;
+        }
+        
+        .resume .sub-heading {
+            font-size: 13px;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin: 2.5rem 0 0.5rem;
+        }
+        
+        .resume .text-wrapper {
+            margin: 4rem 0;
+        }
+        
+        .resume .text-wrapper .heading {
+            font-size: 1.6rem;
+            font-weight: 600;
+            width: 80%;
+            line-height: 2.0rem;
+        }
+        
+        .resume .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .resume .header p {
+            margin-bottom: 0;
+        }
+        
+        .resume small {
+            font-size: 14px;
+        }
+        
+        .resume .text-wrapper .content {
+            margin: 1rem 0 2.5rem;
+        }
+        
+        .progress {
+            margin: 1rem auto 2.5rem;
+            padding: 0;
+            width: 100%;
+            height: 5px;
+            overflow: hidden;
+            background: #e5e5e5;
+            border-radius: 0px;
+        }
+        
+        .skill p {
+            font-weight: 500;
+            line-height: 2rem;
+        }
+        
+        .progress .bar {
+            position: relative;
+            float: left;
+            min-width: 1%;
+            height: 100%;
+            background: #000;
+        }
+        
+        .resume .left-sec {
+            position: relative;
+            padding-right: 3rem;
+        }
+        
+        .resume .right-sec {
+            padding-left: 4rem;
+        }
+        
+        .resume .left-sec::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            background-color: #cacaca;
+            width: 0.12rem;
+        }
+        
+        .resume .ref .details {
+            margin-top: 1rem;
+        }
+        
+        .resume .ref .details p {
+            margin-bottom: 0;
+        }
+        
+        .resume .page-demo {
+            position: relative;
+            overflow: hidden;
+            border-radius: 6px;
+            box-shadow: 0 20px 60px 0 rgb(186 200 227 / 10%), 0 16px 36px 0 rgb(186 200 227 / 30%);
+            background-color: #fff;
+            padding: 4rem;
+            min-height: 1000px;
+            margin: 3.5rem 0;
+        }
+    </style>
+
+</head>
+
+<body>
+    <main>
+        <section class="resume">
+            <div class="topbar">
+                <a href="https://webpixels.tech/">
+                    <div class="topbar__logo">
+                        <img src="logo.png" class="" alt="Web Pixels" height="30px" width="auto">
+                    </div>
+                </a>
+            </div>
+            <div class="container main-wrapper">
+                <!--- Resume Header -->
+                <div class="row">
+                    <div class="col">
+                        <div class="main-header">
+                            <h1 class="name">
+                                REGINAS GIBBONS
+                            </h1>
+                            <h3 class="profile-title">Software Developer</h3>
+                        </div>
+                    </div>
+                </div>
+                <!---// Resume Header -->
+                <hr style="margin: 0;">
+                <div class="row">
+                    <!-- === Left sec === -->
+                    <div class="col-lg-4 left-sec">
+                        <!-- details -->
+                        <div class="text-wrapper">
+                            <h2 class="main-heading">Details</h2>
+
+                            <h5 class="sub-heading">Address</h5>
+                            <p>1234, Loreum Ipsum Road, New Delhi 122001</p>
+
+                            <h5 class="sub-heading">Phone</h5>
+                            <p>(718) 1234-2494</p>
+
+                            <h5 class="sub-heading">Email</h5>
+                            <p>contact@webpixels.tech</p>
+
+                            <h5 class="sub-heading">PLACE OF BIRTH </h5>
+                            <p>Delhi</p>
+                        </div>
+                        <!--// details -->
+
+                        <!-- Links -->
+                        <div class="text-wrapper">
+                            <h2 class="main-heading">Links</h2>
+
+                            <p><a href="#" class="link">https://fonts.google.com</a></p>
+                            <p><a href="#" class="link">https://in.yahoo.com</a></p>
+                            <p><a href="#" class="link">https://www.ambikasugars.in</a></p>
+                        </div>
+                        <!-- // Links -->
+
+                        <!-- Skills -->
+                        <div class="text-wrapper">
+                            <h2 class="main-heading">Skills</h2>
+
+                            <div class="skill">
+                                <p>Excellent Decision-making Skills</p>
+                                <div class="progress">
+                                    <div class="bar" style="width:100%">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="skill">
+                                <p>Advanced Mathematical Skills</p>
+                                <div class="progress">
+                                    <div class="bar" style="width:90%">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="skill">
+                                <p>Complex Problem Solving</p>
+                                <div class="progress">
+                                    <div class="bar" style="width:80%">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="skill">
+                                <p>Data Entry and Analysis Skills</p>
+                                <div class="progress">
+                                    <div class="bar" style="width:70%">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="skill">
+                                <p>Excellent Decision-making Skills</p>
+                                <div class="progress">
+                                    <div class="bar" style="width:40%">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="skill">
+                                <p>Strong Organizational Skills </p>
+                                <div class="progress">
+                                    <div class="bar" style="width:100%">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="skill">
+                                <p>Knowledge of Government Project </p>
+                                <div class="progress">
+                                    <div class="bar" style="width:100%">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="skill">
+                                <p>Management Skills Superior </p>
+                                <div class="progress">
+                                    <div class="bar" style="width:90%">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="skill">
+                                <p>Communication Skills </p>
+                                <div class="progress">
+                                    <div class="bar" style="width:90%">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="skill">
+                                <p>Advanced Communication Skills </p>
+                                <div class="progress">
+                                    <div class="bar" style="width:80%">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="skill">
+                                <p>Project Management Skills</p>
+                                <div class="progress">
+                                    <div class="bar" style="width:70%">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // Skills -->
+
+                        <!-- Language -->
+                        <div class="text-wrapper">
+                            <h2 class="main-heading">Language</h2>
+
+                            <div class="skill">
+                                <p>English</p>
+                                <div class="progress">
+                                    <div class="bar" style="width:100%">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="skill">
+                                <p>Hindi</p>
+                                <div class="progress">
+                                    <div class="bar" style="width:100%">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // Language -->
+                    </div>
+                    <!-- === // Left sec === -->
+
+                    <!-- === Right sec === -->
+                    <div class="col-lg-8 right-sec">
+
+                        <!-- Career Objective -->
+                        <div class="text-wrapper">
+                            <h2 class="main-heading">Career Objective</h2>
+                            <p>To secure a challenging position in a reputable organization to expand my learnings, knowledge, and skills. Secure a responsible career opportunity to fully utilize my training and skills, while making a significant contribution
+                                to the success of the company. Seeking an entry-level position to begin my career in a high-level professional environment.</p>
+                        </div>
+                        <!-- Career Objective -->
+                        <hr>
+
+                        <!-- employment history -->
+                        <div class="text-wrapper">
+                            <h2 class="main-heading">EMPLOYMENT History</h2>
+                            <div class="emp-details">
+                                <div class="header">
+                                    <h5 class="heading">Auditing Clerk, Linthrop Accounting</h5>
+                                    <p class="place"> New York</p>
+                                </div>
+                                <small>Jun 2020 - Feb 2019</small>
+                                <div class="content">
+                                    <ul>
+                                        <li>Processed invoices and payments.</li>
+                                        <li>Examined accounting records to ensure accuracy.</li>
+                                        <li>Created financial reports and corrected any errors.</li>
+                                        <li>Utilized complex auditing software to ensure precision.</li>
+                                        <li>Worked to ensure that company records complied with local, state, and federal laws.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="emp-details">
+                                <div class="header">
+                                    <h5 class="heading">Payroll Auditing Clerk, District 7 Movers</h5>
+                                    <p class="place"> New York</p>
+                                </div>
+                                <small>Jun 2020 - Feb 2019</small>
+                                <div class="content">
+                                    <ul>
+                                        <li>Successfully managed payroll and personnel files.</li>
+                                        <li>Maintained accurate information in the payroll system.</li>
+                                        <li>Organized payroll tax records and W-2 files.</li>
+                                        <li>Worked with Administrators to resolve questions about payroll, pay-rates, and deductions.</li>
+                                        <li>Examined accounting records to ensure accuracy.</li>
+                                        <li>Created financial reports and corrected any errors.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="emp-details">
+                                <div class="header">
+                                    <h5 class="heading">First Selectman, Town of Fairfield</h5>
+                                    <p class="place"> Fairfield</p>
+                                </div>
+                                <small>Jun 2020 - Feb 2019</small>
+                                <div class="content">
+                                    <ul>
+                                        <li>Provided guidance to town employees, commissions, and committees.</li>
+                                        <li>Gracefully handled many issues and implemented appropriate policies when necessary.</li>
+                                        <li>Coordinated interdepartmental activities.</li>
+                                        <li>Appropriately responded to public emergencies.</li>
+                                        <li>Acted as a thoughtful and considerate spokesman for the town.</li>
+                                        <li>Maintained accurate information in the payroll system.</li>
+                                        <li>Organized payroll tax records and W-2 files.</li>
+                                        <li>Worked with Administrators to resolve questions about payroll, pay-rates, and deductions.</li>
+                                        <li>Examined accounting records to ensure accuracy.</li>
+                                        <li>Created financial reports and corrected any errors.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="emp-details">
+                                <div class="header">
+                                    <h5 class="heading">Eexecutive Administrative Assistant to First Selectman, Town of Fairfield
+                                    </h5>
+                                    <p class="place"> Fairfield</p>
+                                </div>
+                                <small>Jun 2020 - Feb 2019</small>
+                                <div class="content">
+                                    <ul>
+                                        <li>Provided guidance to town employees, commissions, and committees.</li>
+                                        <li>Gracefully handled many issues and implemented appropriate policies when necessary.</li>
+                                        <li>Coordinated interdepartmental activities.</li>
+                                        <li>Appropriately responded to public emergencies.</li>
+                                        <li>Acted as a thoughtful and considerate spokesman for the town.</li>
+                                        <li>Maintained accurate information in the payroll system.</li>
+                                        <li>Organized payroll tax records and W-2 files.</li>
+                                        <li>Worked with Administrators to resolve questions about payroll, pay-rates, and deductions.</li>
+                                        <li>Examined accounting records to ensure accuracy.</li>
+                                        <li>Created financial reports and corrected any errors.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // employment history -->
+                        <hr>
+
+                        <!-- Education -->
+                        <div class="text-wrapper">
+                            <h2 class="main-heading">EDUCATION</h2>
+
+                            <div class="content">
+                                <div class="header">
+                                    <h5 class="heading">Associate of Accounting, Orlando Community College</h5>
+                                    <p class="place"> Orlando</p>
+                                </div>
+                                <small>Jun 2020 - Feb 2019</small>
+                            </div>
+
+                            <div class="content">
+                                <div class="header">
+                                    <h5 class="heading">Payroll Auditing Clerk, District 7 Movers</h5>
+                                    <p class="place"> New York</p>
+                                </div>
+                                <small>Jun 2020 - Feb 2019</small>
+                            </div>
+
+                            <div class="content">
+                                <div class="header">
+                                    <h5 class="heading">First Selectman, Town of Fairfield</h5>
+                                    <p class="place"> Fairfield</p>
+                                </div>
+                                <small>Jun 2020 - Feb 2019</small>
+                            </div>
+
+                            <div class="content">
+                                <div class="header">
+                                    <h5 class="heading">Bachelor of Economics , Sacred Heart Fairfield University
+                                    </h5>
+                                    <p class="place"> Fairfield</p>
+                                </div>
+                                <small>Jun 2020 - Feb 2019</small>
+                            </div>
+
+                            <div class="content">
+                                <div class="header">
+                                    <h5 class="heading">High School Diploma, Park May High School</h5>
+                                    <p class="place"> Fairfield</p>
+                                </div>
+                                <small>Jun 2020 - Feb 2019</small>
+                            </div>
+
+                            <div class="content">
+                                <div class="header">
+                                    <h5 class="heading">High School Diploma, Fairfield Preparatory Fairfield School
+                                    </h5>
+                                    <p class="place"> Fairfield</p>
+                                </div>
+                                <small>Jun 2020 - Feb 2019</small>
+                            </div>
+                        </div>
+                        <!-- // Education -->
+                        <hr>
+
+                        <!-- References -->
+                        <div class="text-wrapper ref">
+                            <h2 class="main-heading">References</h2>
+
+                            <div class="content">
+                                <div class="header">
+                                    <h5 class="heading">Marjorie Hughes</h5>
+                                </div>
+                                <small>District 7 Movers</small>
+                                <div class="details">
+                                    <p>contact@webpixels.tech</p>
+                                    <p>850-125-2415</p>
+                                </div>
+                            </div>
+
+                            <div class="content">
+                                <div class="header">
+                                    <h5 class="heading">Regina Atlas</h5>
+                                </div>
+                                <small>Fairfield Senior Center</small>
+                                <div class="details">
+                                    <p>contact@webpixels.tech </p>
+                                    <p>850-125-2415</p>
+                                </div>
+                            </div>
+
+                            <div class="content">
+                                <div class="header">
+                                    <h5 class="heading">Colt Haddenburg</h5>
+                                </div>
+                                <small>Linthrop Accounting</small>
+                                <div class="details">
+                                    <p>contact@webpixels.tech</p>
+                                    <p>850-125-2415</p>
+                                </div>
+                            </div>
+
+                            <div class="content">
+                                <div class="header">
+                                    <h5 class="heading">Amy Phillips</h5>
+                                </div>
+                                <small>Fairfield Youth</small>
+                                <div class="details">
+                                    <p>contact@webpixels.tech</p>
+                                    <p>850-125-2415</p>
+                                </div>
+                            </div>
+
+                            <div class="content">
+                                <div class="header">
+                                    <h5 class="heading">Ronnie Johnson</h5>
+                                </div>
+                                <small>Linthrop Accounting</small>
+                                <div class="details">
+                                    <p>contact@webpixels.tech</p>
+                                    <p>850-125-2415</p>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <div class="header">
+                                    <h5 class="heading">Dr. Steven Rosenburg</h5>
+                                </div>
+                                <small>Town of Fairfield Municipal Center</small>
+                                <div class="details">
+                                    <p>contact@webpixels.tech</p>
+                                    <p>850-125-2415</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // References -->
+
+                    </div>
+                    <!-- === // Right sec === -->
+                </div>
+            </div>
+            <!-- container -->
+
+            <div class="page-demo">
+
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
