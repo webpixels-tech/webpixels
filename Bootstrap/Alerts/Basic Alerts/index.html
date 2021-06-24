@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Basic Alerts</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+        body {
+            background-color: #f1f2f7;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        .wrap {
+            background-color: #fff;
+            padding: 40px;
+        }
+        
+        .alert .icon {
+            margin-right: 6px;
+            height: 18px;
+            width: auto;
+        }
+        
+        .alert-primary {
+            color: #6e4ff6;
+            background-color: #e2dcfd;
+            border-color: #d6cefc;
+        }
+        
+        .alert-secondary {
+            color: #1dc9b7;
+            background-color: #d2f4f1;
+            border-color: #c0f0eb;
+        }
+        
+        .alert.alert-success {
+            color: #4caf50;
+            background: rgba(29, 201, 183, .1);
+            border-color: rgba(29, 201, 183, .1);
+        }
+        
+        .alert.alert-info {
+            color: #36a3f7;
+            background: rgba(54, 163, 247, .1);
+            border-color: rgba(54, 163, 247, .1);
+        }
+        
+        .alert.alert-warning {
+            color: #ffb822;
+            background: rgba(255, 184, 34, .1);
+            border-color: rgba(255, 184, 34, .1);
+        }
+        
+        .alert.alert-danger {
+            color: #f4516c;
+            background: rgba(244, 81, 108, .1);
+            border-color: rgba(244, 81, 108, .1);
+        }
+        
+        .alert .btn-close {
+            background-size: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="container m-5">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="wrap">
+                        <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                            <span><img src="icons/notifications.svg" class="icon"></span> Hello World! This is default alert message box style.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        <div class="alert alert-secondary alert-dismissible fade show" role="alert">
+                            <span><img src="icons/pin.svg" class="icon"></span> Hello there! This is secondary alert message box style.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            <span><img src="icons/checkmark-circle.svg" class="icon"></span> Well done! You successfully read this important alert message.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        <div class="alert alert-info alert-dismissible fade show" role="alert">
+                            <span><img src="icons/price-tag.svg" class="icon"></span> Heads up! This alert needs your attention, but it's not super important.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                            <span><img src="icons/exclamation.svg" class="icon"></span> Warning! Better check yourself, you're not looking too good.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <span><img src="icons/ghost.svg" class="icon"></span> Oh snap! Change a few things up and try submitting again.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
