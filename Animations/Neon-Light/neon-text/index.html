@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Neo Light</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Vibur&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #010a01;
+            background-image: url("https://cdn.pixabay.com/photo/2017/02/12/12/42/wall-2059909_640.png")
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .neon-text {
+            color: #fff;
+            font-size: 8em;
+            line-height: 8rem;
+            letter-spacing: 3px;
+            font-family: "Yellowtail", sans-serif;
+            font-weight: 300;
+        }
+        
+        .neon-text.pulsate {
+            animation: pulsate 0.11s ease-in-out infinite alternate;
+        }
+        
+        .neon-text.flicker {
+            animation: flicker 1.5s infinite alternate;
+        }
+        
+        @keyframes flicker {
+            0%,
+            18%,
+            22%,
+            25%,
+            53%,
+            57%,
+            100% {
+                text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #5271ff, 0 0 80px #5271ff, 0 0 90px #5271ff, 0 0 100px #5271ff, 0 0 150px #5271ff;
+            }
+            20%,
+            24%,
+            55% {
+                text-shadow: none;
+            }
+        }
+        
+        @keyframes pulsate {
+            100% {
+                text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #5271ff, 0 0 80px #5271ff, 0 0 90px #5271ff, 0 0 100px #5271ff, 0 0 150px #5271ff;
+            }
+            0% {
+                text-shadow: 0 0 4px #fff, 0 0 10px #fff, 0 0 18px #fff, 0 0 38px #5271ff, 0 0 73px #5271ff, 0 0 80px #5271ff, 0 0 94px #5271ff, 0 0 140px #5271ff;
+            }
+        }
+        
+        @media screen and (prefers-reduced-motion) {
+            h1 {
+                animation: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrap">
+            <h1 class="neon-text flicker">
+                Open
+            </h1>
+            <h2 class="neon-text pulsate">
+                All Day
+            </h2>
+        </div>
+
+    </div>
+</body>
+
+</html>

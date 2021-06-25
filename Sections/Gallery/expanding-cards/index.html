@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Expanding Card Gallery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow-x: hidden;
+            font-family: 'Muli', sans-serif;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: auto;
+        }
+        
+        .ex-gallery {
+            margin: 40px auto;
+        }
+        
+        .ex-gallery .wrap {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .ex-gallery .item {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 350px;
+            width: 100%;
+            max-width: 100%;
+            color: #fff;
+            cursor: pointer;
+            margin: 10px;
+            position: relative;
+            flex: 1;
+            transition: all 700ms;
+            -webkit-transition: all 700ms;
+            -moz-transition: all 700ms;
+        }
+        
+        .ex-gallery .item h3 {
+            font-size: 24px;
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            margin: 0;
+            opacity: 0;
+        }
+        
+        .ex-gallery .item.active {
+            flex: 5;
+        }
+        
+        .ex-gallery .item.active h3 {
+            opacity: 1;
+            transition: opacity 0.3s ease-in 0.4s;
+        }
+        
+        @media (max-width: 767px) {
+            .ex-gallery .item {
+                flex: unset;
+                height: 200px;
+            }
+            .ex-gallery .item h3 {
+                opacity: 1;
+                font-size: 18px;
+            }
+            .ex-gallery .item.active {
+                flex: unset;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="ex-gallery">
+        <div class="container">
+            <div class="wrap">
+                <div class="item" style="background-image: url('https://images.pexels.com/photos/161212/rio-de-janeiro-olympics-2016-niteroi-brazil-161212.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');">
+                    <h3>Explore the Nature</h3>
+                </div>
+                <div class="item" style="background-image: url('https://images.pexels.com/photos/2422915/pexels-photo-2422915.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');">
+                    <h3>Hidden Behind the Scene</h3>
+                </div>
+                <div class="item active" style="background-image: url('https://images.unsplash.com/photo-1549880338-65ddcdfd017b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');">
+                    <h3>Explore the World</h3>
+                </div>
+                <div class="item" style="background-image: url('https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');">
+                    <h3>Explore the World</h3>
+                </div>
+                <div class="item" style="background-image: url('https://images.pexels.com/photos/1146707/pexels-photo-1146707.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');">
+                    <h3>Nature HD Wallpaper</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        const items = document.querySelectorAll('.item');
+        items.forEach(item => {
+            item.addEventListener('click', () => {
+                removeActiveClassess();
+                item.classList.add('active');
+            })
+        })
+
+        function removeActiveClassess() {
+            items.forEach(item => {
+                item.classList.remove('active');
+            })
+        }
+    </script>
+</body>
+
+</html>
