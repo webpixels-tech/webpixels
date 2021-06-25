@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Landing Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            position: relative;
+        }
+        
+        a {
+            color: #0066ff;
+        }
+        
+        body {
+            background-color: #fff;
+            font-family: 'Open Sans', sans-serif;
+            color: #222;
+            overflow-x: hidden;
+        }
+        
+        h2 {
+            margin-bottom: 15px;
+        }
+        
+        .text-blue {
+            color: #0066ff;
+        }
+        
+        .container {
+            position: relative;
+            max-width: 1200px;
+            margin: auto;
+            width: 100%;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        
+        header {
+            background-color: #222222;
+            color: #fff;
+            padding: 12px 15px;
+            position: relative;
+        }
+        
+        header .logo h2 {
+            margin-bottom: 0;
+        }
+        
+        header .wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        header .nav ul {
+            display: flex;
+            list-style-type: none;
+            justify-content: space-around;
+        }
+        
+        header .nav ul li {
+            margin: 10px 20px;
+        }
+        
+        header .nav ul li a {
+            color: inherit;
+            text-decoration: none;
+        }
+        
+        header .nav ul li a:hover {
+            color: #0066ff;
+        }
+        
+        header .nav ul li.active a {
+            color: #0066ff;
+        }
+        
+        .toggle {
+            position: fixed;
+            width: 40px;
+            height: 40px;
+            background-color: #000;
+            right: 20px;
+            top: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            visibility: hidden;
+            opacity: 0;
+            z-index: 9;
+        }
+        
+        .toggle::before,
+        .toggle::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 1px;
+            background-color: #fff;
+            transform: translateY(-5px);
+            transition: all 0.3s;
+        }
+        
+        .toggle::after {
+            transform: translateY(5px);
+        }
+        
+        .toggle.active::before {
+            transform: rotate(-45deg) translateY(0px);
+        }
+        
+        .toggle.active::after {
+            transform: rotate(45deg) translateY(0px);
+        }
+        
+        .header .nav.active {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        header .nav.active ul li {
+            margin: 30px 20px;
+        }
+        
+        .hero {
+            background-image: url(banner.jpeg);
+            background-size: cover;
+            background-position: center;
+            height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #00000085;
+        }
+        
+        .hero h1 {
+            font-size: 3em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 3.5rem;
+        }
+        
+        .hero p {
+            font-size: 18px;
+        }
+        
+        .hero .text {
+            max-width: 500px;
+            margin: auto;
+        }
+        
+        .content p {
+            color: #555;
+            line-height: 30px;
+            letter-spacing: 1.2px;
+        }
+        
+        .content .text-wrap {
+            margin: 50px auto;
+        }
+        
+        footer {
+            background-color: #0D1117;
+            padding: 10px;
+            text-align: center;
+            color: #fff;
+        }
+        
+        @media (max-width: 767px) {
+            header .nav {
+                position: fixed;
+                top: 0;
+                left: 0;
+                min-height: 100ch;
+                width: 100%;
+                background-color: black;
+                right: 0;
+                bottom: 0;
+                height: 100%;
+                z-index: 1;
+                display: flex;
+                justify-content: center;
+                padding-top: 70px;
+                opacity: 0;
+                visibility: hidden;
+            }
+            header .nav ul {
+                display: block;
+            }
+            header .toggle {
+                opacity: 1;
+                visibility: visible;
+            }
+            header .nav.active {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="wrap">
+                <div class="logo">
+                    <h2>
+                        <span class="text-blue">Web</span> Pixels</h2>
+                </div>
+                <div class="nav" id="nav">
+                    <ul>
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="toggle" id="toggle"></div>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="container">
+            <h1>Welcome To My Website</h1>
+            <div class="text">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores, consequuntur?</p>
+            </div>
+        </div>
+    </section>
+    <section class="content">
+        <div class="container">
+            <div class="text-wrap">
+                <h2>Content One</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione dolorem voluptates eveniet tempora ut cupiditate magnam, sapiente, hic quo in ipsum iste soluta eaque perferendis nihil recusandae dolore officia aperiam corporis similique.
+                    Facilis quos tempore labore totam! Consectetur molestiae iusto ducimus error reiciendis aspernatur dolor, modi dolorem sit architecto, voluptate magni sunt unde est quas? Voluptates a dolorum voluptatum quo perferendis aut sit. Aspernatur
+                    libero laboriosam ab eligendi omnis delectus earum labore, placeat officiis sint illum rem voluptas ipsum repellendus iste eius recusandae quae excepturi facere, iure rerum sequi? Illum velit delectus dicta et iste dolorum obcaecati
+                    minus odio eligendi!</p>
+            </div>
+            <div class="text-wrap">
+                <h2>Content Two</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione dolorem voluptates eveniet tempora ut cupiditate magnam, sapiente, hic quo in ipsum iste soluta eaque perferendis nihil recusandae dolore officia aperiam corporis similique.
+                    Facilis quos tempore labore totam! Consectetur molestiae iusto ducimus error reiciendis aspernatur dolor, modi dolorem sit architecto, voluptate magni sunt unde est quas? Voluptates a dolorum voluptatum quo perferendis aut sit. Aspernatur
+                    libero laboriosam ab eligendi omnis delectus earum labore, placeat officiis sint illum rem voluptas ipsum repellendus iste eius recusandae quae excepturi facere, iure rerum sequi? Illum velit delectus dicta et iste dolorum obcaecati
+                    minus odio eligendi!</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script>
+        const toggle = document.getElementById("toggle");
+        const nav = document.getElementById("nav");
+        toggle.addEventListener('click', function() {
+            toggle.classList.toggle('active');
+            nav.classList.toggle('active');
+        })
+    </script>
+</body>
+
+</html>
