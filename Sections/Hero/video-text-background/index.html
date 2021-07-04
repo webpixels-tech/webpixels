@@ -1,14 +1,61 @@
 <html>
-    <head>
-        <title>Video Text Background</title>
-        <meta name="viewport" content="device=width-device, initial-scale=1.0">
-        <script src="https://kit.fontawesome.com/d17dd9fe1a.js" crossorigin="anonymous"></script>
-        <link href="style.css" rel="stylesheet">
-    </head>
+
+<head>
+    <title>Video Text Background</title>
+    <meta name="viewport" content="device=width-device, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d17dd9fe1a.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+            position: relative;
+        }
+        
+        section {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+        }
+        
+        section video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        section h2 {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-size: 14vw;
+            text-transform: uppercase;
+            color: #fff;
+            background-color: #000;
+            mix-blend-mode: multiply;
+        }
+    </style>
+</head>
+
 <body>
-<section>
-    <video src="video.mp4" autoplay muted loop></video>
-    <h2>Video in Text Background</h2>
-</section>
+    <section>
+        <video src="video.mp4" autoplay muted loop></video>
+        <h2>Video in Text Background</h2>
+    </section>
 </body>
+
 </html>
