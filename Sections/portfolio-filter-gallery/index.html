@@ -1,224 +1,364 @@
 <html>
-    <head>
-        <title>Wrap Text aroud image</title>
-        <meta name="viewport" content="device=width-device, initial-scale=1.0">
-        <script src="https://kit.fontawesome.com/d17dd9fe1a.js" crossorigin="anonymous"></script>
-        <link href="style.css" rel="stylesheet">
-    </head>
+
+<head>
+    <title>Wrap Text aroud image</title>
+    <meta name="viewport" content="device=width-device, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d17dd9fe1a.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Roboto, sans-serif;
+        }
+        
+        body {
+            background-color: #ececec;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 20px;
+        }
+        
+        .container .card {
+            width: 300px;
+            height: 300px;
+            margin: 15px;
+            overflow: hidden;
+            position: relative;
+            transition: 0.5s;
+        }
+        
+        .container .wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .filter-btn-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .filter-btn-wrap .list {
+            margin: 20px 10px;
+            list-style-type: none;
+            background-color: #e3e4e8;
+            padding: 12px 25px;
+            box-shadow: 1px 2px 0px rgb(0 0 0 / 10%);
+            cursor: pointer;
+        }
+        
+        .filter-btn-wrap .list.active {
+            background-color: #353c44;
+            color: #fff;
+        }
+        
+        .card .imgBox,
+        .card .contentBox {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .card .imgBox img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .card .contentBox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        
+        .card .contentBox::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #0D1117;
+            transform: scaleX(0);
+            transition: transform 0.5s ease-in-out;
+            transform-origin: right;
+        }
+        
+        .card:hover .contentBox::before {
+            transform: scaleX(1);
+            transition: transform 0.5s ease-in-out;
+            transform-origin: left;
+        }
+        
+        .card .contentBox .content {
+            color: #fff;
+            z-index: 1;
+            padding: 40px;
+            transform: translateX(-320px);
+            transition: 0.5s;
+            transition-delay: 0s;
+        }
+        
+        .card:hover .contentBox .content {
+            transform: translateX(0px);
+            transition-delay: 0.5s;
+        }
+        
+        .card p {
+            line-height: 1.7;
+            font-weight: 400;
+        }
+        
+        .card h2 {
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        
+        .card.active {
+            display: block;
+        }
+        
+        .card.hide {
+            display: none;
+        }
+    </style>
+</head>
+
 <body>
-<section>
-    <div class="container">
-        <ul class="filter-btn-wrap">
-            <li class="list active" data-filter="all">All</li>
-            <li class="list" data-filter="web">Web</li>
-            <li class="list" data-filter="desktop">Desktop</li>
-            <li class="list" data-filter="office">Office</li>
-            <li class="list" data-filter="chair">Chair</li>
-        </ul>
-        <div class="wrapper">
-            <div class="card" data-item="desktop">
-                <div class="imgBox">
-                    <img src="img/1.jpg">
-                </div>
-                <div class="contentBox">
-                    <div class="content">
-                        <h2>Post One</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+    <section>
+        <div class="container">
+            <ul class="filter-btn-wrap">
+                <li class="list active" data-filter="all">All</li>
+                <li class="list" data-filter="web">Web</li>
+                <li class="list" data-filter="desktop">Desktop</li>
+                <li class="list" data-filter="office">Office</li>
+                <li class="list" data-filter="chair">Chair</li>
+            </ul>
+            <div class="wrapper">
+                <div class="card" data-item="desktop">
+                    <div class="imgBox">
+                        <img src="img/1.jpg">
+                    </div>
+                    <div class="contentBox">
+                        <div class="content">
+                            <h2>Post One</h2>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="card"  data-item="desktop">
-                <div class="imgBox">
-                    <img src="img/2.jpg">
-                </div>
-                <div class="contentBox">
-                    <div class="content">
-                        <h2>Post One</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                <div class="card" data-item="desktop">
+                    <div class="imgBox">
+                        <img src="img/2.jpg">
+                    </div>
+                    <div class="contentBox">
+                        <div class="content">
+                            <h2>Post One</h2>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="card"  data-item="desktop">
-                <div class="imgBox">
-                    <img src="img/3.jpg">
-                </div>
-                <div class="contentBox">
-                    <div class="content">
-                        <h2>Post One</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                <div class="card" data-item="desktop">
+                    <div class="imgBox">
+                        <img src="img/3.jpg">
+                    </div>
+                    <div class="contentBox">
+                        <div class="content">
+                            <h2>Post One</h2>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="card"  data-item="desktop">
-                <div class="imgBox">
-                    <img src="img/4.jpg">
-                </div>
-                <div class="contentBox">
-                   <div class="content">
-                        <h2>Post One</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                <div class="card" data-item="desktop">
+                    <div class="imgBox">
+                        <img src="img/4.jpg">
+                    </div>
+                    <div class="contentBox">
+                        <div class="content">
+                            <h2>Post One</h2>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="card"  data-item="web">
-                <div class="imgBox">
-                    <img src="img/5.jpg">
-                </div>
-                <div class="contentBox">
-                    <div class="content">
-                        <h2>Post One</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                <div class="card" data-item="web">
+                    <div class="imgBox">
+                        <img src="img/5.jpg">
+                    </div>
+                    <div class="contentBox">
+                        <div class="content">
+                            <h2>Post One</h2>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="card"  data-item="web">
-                <div class="imgBox">
-                    <img src="img/6.jpg">
-                </div>
-                <div class="contentBox">
-                    <div class="content">
-                        <h2>Post One</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                <div class="card" data-item="web">
+                    <div class="imgBox">
+                        <img src="img/6.jpg">
+                    </div>
+                    <div class="contentBox">
+                        <div class="content">
+                            <h2>Post One</h2>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="card"  data-item="web">
-                <div class="imgBox">
-                    <img src="img/7.jpg">
-                </div>
-                <div class="contentBox">
-                    <div class="content">    
-                        <h2>Post One</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                   </div>
-                </div>
-            </div>
-            <div class="card"  data-item="web">
-                <div class="imgBox">
-                    <img src="img/8.jpg">
-                </div>
-                <div class="contentBox">
-                    <div class="content">
-                        <h2>Post One</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                <div class="card" data-item="web">
+                    <div class="imgBox">
+                        <img src="img/7.jpg">
+                    </div>
+                    <div class="contentBox">
+                        <div class="content">
+                            <h2>Post One</h2>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="card" data-item="office">
-                <div class="imgBox">
-                    <img src="img/9.jpg">
-                </div>
-                <div class="contentBox">
-                    <div class="content">
-                        <h2>Post One</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                <div class="card" data-item="web">
+                    <div class="imgBox">
+                        <img src="img/8.jpg">
+                    </div>
+                    <div class="contentBox">
+                        <div class="content">
+                            <h2>Post One</h2>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="card" data-item="office">
-                <div class="imgBox">
-                    <img src="img/10.jpg">
-                </div>
-                <div class="contentBox">
-                    <div class="content">
-                        <h2>Post One</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                <div class="card" data-item="office">
+                    <div class="imgBox">
+                        <img src="img/9.jpg">
+                    </div>
+                    <div class="contentBox">
+                        <div class="content">
+                            <h2>Post One</h2>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="card" data-item="office">
-                <div class="imgBox">
-                    <img src="img/11.jpg">
-                </div>
-                <div class="contentBox">
-                    <div class="content">
-                        <h2>Post One</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                <div class="card" data-item="office">
+                    <div class="imgBox">
+                        <img src="img/10.jpg">
+                    </div>
+                    <div class="contentBox">
+                        <div class="content">
+                            <h2>Post One</h2>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="card" data-item="office">
-                <div class="imgBox">
-                    <img src="img/12.jpg">
-                </div>
-                <div class="contentBox">
-                    <div class="content">
-                        <h2>Post One</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                <div class="card" data-item="office">
+                    <div class="imgBox">
+                        <img src="img/11.jpg">
+                    </div>
+                    <div class="contentBox">
+                        <div class="content">
+                            <h2>Post One</h2>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="card" data-item="chair">
-                <div class="imgBox">
-                    <img src="img/chair1.jpg">
-                </div>
-                <div class="contentBox">
-                    <div class="content">
-                        <h2>Post One</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                <div class="card" data-item="office">
+                    <div class="imgBox">
+                        <img src="img/12.jpg">
+                    </div>
+                    <div class="contentBox">
+                        <div class="content">
+                            <h2>Post One</h2>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="card" data-item="chair">
-                <div class="imgBox">
-                    <img src="img/chair2.jpg">
-                </div>
-                <div class="contentBox">
-                    <div class="content">
-                        <h2>Post One</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                <div class="card" data-item="chair">
+                    <div class="imgBox">
+                        <img src="img/chair1.jpg">
+                    </div>
+                    <div class="contentBox">
+                        <div class="content">
+                            <h2>Post One</h2>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="card" data-item="chair">
-                <div class="imgBox">
-                    <img src="img/chair3.jpg">
-                </div>
-                <div class="contentBox">
-                    <div class="content">
-                        <h2>Post One</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                <div class="card" data-item="chair">
+                    <div class="imgBox">
+                        <img src="img/chair2.jpg">
+                    </div>
+                    <div class="contentBox">
+                        <div class="content">
+                            <h2>Post One</h2>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="card" data-item="chair">
-                <div class="imgBox">
-                    <img src="img/chair4.jpg">
+                <div class="card" data-item="chair">
+                    <div class="imgBox">
+                        <img src="img/chair3.jpg">
+                    </div>
+                    <div class="contentBox">
+                        <div class="content">
+                            <h2>Post One</h2>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="contentBox">
-                    <div class="content">
-                        <h2>Post One</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                <div class="card" data-item="chair">
+                    <div class="imgBox">
+                        <img src="img/chair4.jpg">
+                    </div>
+                    <div class="contentBox">
+                        <div class="content">
+                            <h2>Post One</h2>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>   
-<script>
-    let list = document.querySelectorAll('.list');
-    let card = document.querySelectorAll('.card');
+    </section>
+    <script>
+        let list = document.querySelectorAll('.list');
+        let card = document.querySelectorAll('.card');
 
-    for(i = 0; i<list.length; i++) {
-        list[i].addEventListener('click', function(){
-            for(let j = 0; j <list.length; j++) {
-                list[j].classList.remove('active');
-            }
-            this.classList.add('active');
-
-            let dataFilter = this.getAttribute('data-filter');
-            for(let k = 0; k < card.length; k++) {
-                card[k].classList.add('hide');
-
-                if(card[k].getAttribute('data-item') == dataFilter || dataFilter == 'all') {
-                    card[k].classList.remove('hide');
-                    card[k].classList.add('active');
+        for (i = 0; i < list.length; i++) {
+            list[i].addEventListener('click', function() {
+                for (let j = 0; j < list.length; j++) {
+                    list[j].classList.remove('active');
                 }
-            }
-        })
-    }
+                this.classList.add('active');
 
-</script>
+                let dataFilter = this.getAttribute('data-filter');
+                for (let k = 0; k < card.length; k++) {
+                    card[k].classList.add('hide');
+
+                    if (card[k].getAttribute('data-item') == dataFilter || dataFilter == 'all') {
+                        card[k].classList.remove('hide');
+                        card[k].classList.add('active');
+                    }
+                }
+            })
+        }
+    </script>
 
 </body>
+
 </html>
