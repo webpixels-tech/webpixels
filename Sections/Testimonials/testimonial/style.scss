@@ -6,46 +6,6 @@
 body {
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-}
-
-.carousel {
-    box-shadow: 2px 2px 3px #494949;
-    height: 530px;
-    width: 500px;
-    overflow: hidden;
-    .img-container {
-        display: flex;
-        transform: translateX(0);
-        transition: transform 0.5s ease-in-out;
-        img {
-            width: 500px;
-            height: 500px;
-            object-fit: cover;
-        }
-    }
-    .buttons-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        button {
-            background-color: #0066ff;
-            color: #fff;
-            border: 0;
-            padding: 10px;
-            width: 49.50%;
-            cursor: pointer;
-            &:hover {
-                opacity: 0.9;
-            }
-            &:focus {
-                outline: none;
-            }
-        }
-    }
 }
