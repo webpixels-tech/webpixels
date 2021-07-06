@@ -4,7 +4,138 @@
 <head>
     <title>Calculator Glassmorphism</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" rel="stylesheet">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap");
+        * {
+            margin: 0;
+            padding: 0;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            font-family: 'Quicksand', sans-serif;
+        }
+        
+        body {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #091921;
+            position: relative;
+        }
+        
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: -webkit-gradient(linear, left top, left bottom, from(#e91e63), to(#ffc107));
+            background: linear-gradient(#e91e63, #ffc107);
+            -webkit-clip-path: circle(20% at 30% 20%);
+            clip-path: circle(20% at 30% 20%);
+        }
+        
+        body::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#da00ff));
+            background: linear-gradient(#fff, #da00ff);
+            -webkit-clip-path: circle(20% at 70% 90%);
+            clip-path: circle(20% at 70% 90%);
+        }
+        
+        .calculator {
+            position: relative;
+            background: #ffffff17;
+            border-radius: 6px;
+            overflow: hidden;
+            z-index: 10;
+            -webkit-backdrop-filter: blur(15px);
+            backdrop-filter: blur(15px);
+            border-top: 1px solid #ffffff33;
+            border-left: 1px solid #ffffff33;
+            -webkit-box-shadow: 5px 5px 30px #00000033;
+            box-shadow: 5px 5px 30px #00000033;
+        }
+        
+        .calculator .form-wrap {
+            position: relative;
+            display: -ms-grid;
+            display: grid;
+        }
+        
+        .calculator .form-wrap .value {
+            grid-column: span 4;
+            height: 140px;
+            width: 300px;
+            text-align: right;
+            border: 0;
+            outline: none;
+            padding: 10px;
+            font-size: 30px;
+            color: #fff;
+            border-bottom: 1px solid #ffffff0d;
+            border-right: 1px solid #ffffff0d;
+            background-color: transparent;
+        }
+        
+        .calculator .form-wrap span {
+            display: -ms-grid;
+            display: grid;
+            place-items: center;
+            width: 75px;
+            height: 75px;
+            color: #fff;
+            font-weight: 400;
+            cursor: pointer;
+            font-size: 20px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            border-bottom: 1px solid #ffffff0d;
+            border-right: 1px solid #ffffff0d;
+        }
+        
+        .calculator .form-wrap span:hover {
+            -webkit-transition: 0s;
+            transition: 0s;
+            background-color: #ffffff0d;
+        }
+        
+        .calculator .form-wrap span.active {
+            background-color: #14ff47;
+            color: #192f00;
+            font-size: 24px;
+            font-weight: 500;
+        }
+        
+        .calculator .form-wrap .clear {
+            grid-column: span 2;
+            width: 150px;
+            background-color: #ffffff0d;
+        }
+        
+        .calculator .form-wrap .plus {
+            grid-row: span 2;
+            height: 150px;
+        }
+        
+        .calculator .form-wrap .equal {
+            background-color: #ffffff0d;
+        }
+    </style>
 </head>
 
 <body>
