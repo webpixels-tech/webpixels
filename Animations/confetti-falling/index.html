@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Modal</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Roboto, sans-serif;
+            background-color: #F4F6F8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .modal .btn-close {
+            position: absolute;
+            right: 15px;
+            top: 12px;
+            cursor: pointer;
+            z-index: 9;
+        }
+        
+        .c-modal {
+            max-width: 300px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            height: auto;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 25px 50px rgb(0 0 0 / 10%), 0 0 0 1000px rgb(255 255 255 / 95%);
+            padding: 40px;
+            visibility: hidden;
+        }
+        
+        .c-modal.active {
+            visibility: visible;
+        }
+        
+        .c-modal button[type="submit"],
+        button {
+            border: 0;
+            background-color: #0066ff;
+            color: #fff;
+            padding: 13px 16px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        .c-modal .btn-close {
+            background-color: #000;
+            border: 0;
+            padding: 8px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            float: right;
+            position: fixed;
+            right: 20px;
+            top: 20px;
+            cursor: pointer;
+        }
+        
+        .c-modal p {
+            line-height: 2.0;
+        }
+        
+        .c-modal .btn-close img {
+            width: 100%;
+            height: auto;
+        }
+        
+        #my-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: 100000;
+            visibility: hidden;
+            pointer-events: none;
+        }
+        
+        #my-canvas.active {
+            visibility: visible;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" id="modal-btn">
+    Launch demo modal
+  </button>
+    <canvas id="my-canvas"></canvas>
+
+    <!-- Modal -->
+    <div class="c-modal" id="c-modal">
+        <div class="modal-content">
+            <button type="button" class="btn-close">
+                <img src="cancel.png">
+            </button>
+            <div class="modal-body mb-3 text-center">
+                <div class="text">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis ipsa, error corrupti debitis fugit possimus ut assumenda sapiente quis labore quae provident culpa aperiam, ad recusandae incidunt aliquid accusamus sequi!</p>
+                    <button type="submit" class="btn">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/confetti-js@0.0.18/dist/index.min.js"></script>
+    <script>
+        const modal = document.getElementById("c-modal");
+        const modalBtn = document.getElementById("modal-btn");
+        const closeModalBtn = document.querySelector('.c-modal .btn-close');
+        const canvasConfetti = document.getElementById("my-canvas");
+
+        modalBtn.addEventListener('click', function() {
+            modal.classList.add('active');
+            canvasConfetti.classList.add('active');
+
+        })
+
+        closeModalBtn.addEventListener('click', function() {
+            modal.classList.remove('active');
+            canvasConfetti.classList.remove('active');
+        })
+
+        var confettiSettings = {
+            target: 'my-canvas'
+        };
+        var confetti = new ConfettiGenerator(confettiSettings);
+        confetti.render();
+    </script>
+</body>
+
+</html>
