@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Testimonial Slider</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Roboto, sans-serif;
+        }
+        
+        .sw-slider {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #0066FF;
+            overflow: hidden;
+        }
+        
+        .swiper-container {
+            width: 100%;
+            padding: 50px;
+        }
+        
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+            width: 350px;
+            height: auto;
+            background-color: #d1ebff;
+            box-shadow: 0 15px 50px rgb(0, 0, 0, 0.2);
+            filter: blur(4px);
+            border-radius: 5px;
+        }
+        
+        .swiper-slide.swiper-slide-active {
+            filter: blur();
+            background-color: #fff;
+        }
+        
+        .testimonial-box .quote {
+            text-align: right;
+            position: absolute;
+            top: 0;
+            right: 20px;
+        }
+        
+        .testimonial-box .content {
+            padding-top: 20px;
+        }
+        
+        .testimonial-box .quote img {
+            width: 70px;
+            height: auto;
+            opacity: 0.8;
+        }
+        
+        .testimonial-box {
+            padding: 40px 30px;
+        }
+        
+        .testimonial-box p {
+            line-height: 28px;
+        }
+        
+        .testimonial-box .details .info {
+            margin-left: 20px;
+        }
+        
+        .testimonial-box .img-box {
+            position: relative;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            overflow: hidden;
+            display: block;
+        }
+        
+        .testimonial-box .img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+        
+        .testimonial-box .details {
+            display: flex;
+            align-items: center;
+        }
+        
+        .testimonial-box .details .name {
+            margin: 0 auto 5px;
+        }
+        
+        .testimonial-box .details .profile {
+            margin: 0;
+            font-weight: 400;
+        }
+        
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="sw-slider">
+        <!-- Swiper -->
+        <div class="swiper-container mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="testimonial-box">
+                        <div class="quote">
+                            <img src="quote.png">
+                        </div>
+                        <div class="content">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus placeat modi necessitatibus officia pariatur quibusdam reprehenderit delectus ut, possimus quasi atque quaerat animi totam dolore. Recusandae ipsam numquam
+                                perspiciatis eaque!
+                            </p>
+                        </div>
+                        <div class="details">
+                            <div class="img-box">
+                                <img src="https://media.istockphoto.com/photos/mature-mixed-race-business-man-picture-id1059661424?s=612x612" />
+                            </div>
+                            <div class="info">
+                                <h3 class="name">Richered Federson</h3>
+                                <h4 class="profile">Graphics Designer</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonial-box">
+                        <div class="quote">
+                            <img src="quote.png">
+                        </div>
+                        <div class="content">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus placeat modi necessitatibus officia pariatur quibusdam reprehenderit delectus ut, possimus quasi atque quaerat animi totam dolore. Recusandae ipsam numquam
+                                perspiciatis eaque!
+                            </p>
+                        </div>
+                        <div class="details">
+                            <div class="img-box">
+                                <img src="https://media.istockphoto.com/photos/bar-tender-leaning-at-bar-counter-picture-id864577982?s=612x612" />
+                            </div>
+                            <div class="info">
+                                <h3 class="name">Richered Federson</h3>
+                                <h4 class="profile">Graphics Designer</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonial-box">
+                        <div class="quote">
+                            <img src="quote.png">
+                        </div>
+                        <div class="content">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus placeat modi necessitatibus officia pariatur quibusdam reprehenderit delectus ut, possimus quasi atque quaerat animi totam dolore. Recusandae ipsam numquam
+                                perspiciatis eaque!
+                            </p>
+                        </div>
+                        <div class="details">
+                            <div class="img-box">
+                                <img src="https://media.istockphoto.com/photos/analyst-at-work-picture-id694367086?s=612x612" />
+                            </div>
+                            <div class="info">
+                                <h3 class="name">Richered Federson</h3>
+                                <h4 class="profile">Graphics Designer</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonial-box">
+                        <div class="quote">
+                            <img src="quote.png">
+                        </div>
+                        <div class="content">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus placeat modi necessitatibus officia pariatur quibusdam reprehenderit delectus ut, possimus quasi atque quaerat animi totam dolore. Recusandae ipsam numquam
+                                perspiciatis eaque!
+                            </p>
+                        </div>
+                        <div class="details">
+                            <div class="img-box">
+                                <img src="https://media.istockphoto.com/photos/worried-man-reading-financial-notes-sitting-at-his-desk-in-home-picture-id1257951640" />
+                            </div>
+                            <div class="info">
+                                <h3 class="name">Richered Federson</h3>
+                                <h4 class="profile">Graphics Designer</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonial-box">
+                        <div class="quote">
+                            <img src="quote.png">
+                        </div>
+                        <div class="content">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus placeat modi necessitatibus officia pariatur quibusdam reprehenderit delectus ut, possimus quasi atque quaerat animi totam dolore. Recusandae ipsam numquam
+                                perspiciatis eaque!
+                            </p>
+                        </div>
+                        <div class="details">
+                            <div class="img-box">
+                                <img src="https://media.istockphoto.com/photos/young-african-woman-smiling-at-sunset-picture-id969233490?s=612x612" />
+                            </div>
+                            <div class="info">
+                                <h3 class="name">Richered Federson</h3>
+                                <h4 class="profile">Graphics Designer</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+    </section>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 100,
+                modifier: 2,
+                slideShadows: true,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+            loop: true,
+        });
+    </script>
+</body>
+
+</html>
