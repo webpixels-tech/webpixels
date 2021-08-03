@@ -1,15 +1,78 @@
 <html>
-    <head>
-        <title>Menu Toggle </title>
-     <link href="style.css" rel="stylesheet">
-    </head>
-    <body>
-        <div id="toggle"></div>
-        <script>
-           const toggle = document.getElementById("toggle");
-           toggle.addEventListener('click', function(){
-               toggle.classList.toggle('active');
-           })
-        </script>
-    </body>
+
+<head>
+    <title>Menu Toggle </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: #0D1117;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        #toggle {
+            position: relative;
+            width: 50px;
+            height: 50px;
+            background-color: #6E4FF6;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.2s;
+        }
+        
+        #toggle::before {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 2px;
+            background-color: #fff;
+            transition: 0.2s;
+            transform: translateY(0px);
+            box-shadow: 0 10px 0 #fff;
+        }
+        
+        #toggle::after {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 2px;
+            background-color: #fff;
+            transition: 0.2s;
+            transform: translateY(-10px);
+        }
+        
+        #toggle.active {
+            background-color: #f7226a;
+        }
+        
+        #toggle.active::before {
+            transform: translateY(0px) rotate(45deg);
+            box-shadow: 0 0px 0 #fff;
+        }
+        
+        #toggle.active::after {
+            transform: translateY(0px) rotate(-45deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="toggle"></div>
+    <script>
+        const toggle = document.getElementById("toggle");
+        toggle.addEventListener('click', function() {
+            toggle.classList.toggle('active');
+        })
+    </script>
+</body>
+
 </html>
