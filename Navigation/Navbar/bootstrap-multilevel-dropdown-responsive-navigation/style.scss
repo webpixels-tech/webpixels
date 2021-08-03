@@ -20,6 +20,9 @@
                     font-size: 17px;
                     padding: 10px 20px;
                     color: #101010;
+                    &:hover {
+                        color: #0d6efd;
+                    }
                 }
             }
             .dropdown-menu {
