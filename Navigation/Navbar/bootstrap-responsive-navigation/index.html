@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Bootstrap 5 Responsive Navigation Menu
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="webpixels.png" class="img-fluid">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About Us</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Components
+                </a>
+                            <ul class="dropdown-menu sub-menu02" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+
+                                <li class="nav-item dropdown drop-down02">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Dropdown
+                                  </a>
+                                    <ul class="dropdown-menu sub-menu02" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+
+                                        <li class="nav-item dropdown drop-down02">
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    Dropdown
+                                                  </a>
+                                            <ul class="dropdown-menu sub-menu02" aria-labelledby="navbarDropdown">
+                                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                <li>
+                                                    <hr class="dropdown-divider">
+                                                </li>
+                                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Demo
+                </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Animation</a></li>
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item" tabindex="-1" href="#">level 1</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" tabindex="-1" href="#">level 2</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item" href="#">Auth Pages</a></li>
+                                <li><a class="dropdown-item" href="#">Cards</a></li>
+                                <li><a class="dropdown-item" href="#">Animation</a></li>
+                                <li><a class="dropdown-item" href="#">Atoms</a></li>
+                                <li><a class="dropdown-item" href="#">Auth Pages</a></li>
+                                <li><a class="dropdown-item" href="#">Cards</a></li>
+                            </ul>
+                        </li>
+
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Themes
+                </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Landing Page</a></li>
+                                <li><a class="dropdown-item" href="#">Agency Template</a></li>
+                                <li><a class="dropdown-item" href="#">Email Template</a></li>
+                                <li><a class="dropdown-item" href="#">Single Page</a></li>
+                                <li><a class="dropdown-item" href="#">Landing Page</a></li>
+                                <li><a class="dropdown-item" href="#">Agency Template</a></li>
+                                <li><a class="dropdown-item" href="#">Email Template</a></li>
+                                <li><a class="dropdown-item" href="#">Single Page</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact Us</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        (function($bs) {
+            const CLASS_NAME = 'has-child-dropdown-show';
+            $bs.Dropdown.prototype.toggle = function(_orginal) {
+                return function() {
+                    document.querySelectorAll('.' + CLASS_NAME).forEach(function(e) {
+                        e.classList.remove(CLASS_NAME);
+                    });
+                    let dd = this._element.closest('.dropdown').parentNode.closest('.dropdown');
+                    for (; dd && dd !== document; dd = dd.parentNode.closest('.dropdown')) {
+                        dd.classList.add(CLASS_NAME);
+                    }
+                    return _orginal.call(this);
+                }
+            }($bs.Dropdown.prototype.toggle);
+
+            document.querySelectorAll('.dropdown').forEach(function(dd) {
+                dd.addEventListener('hide.bs.dropdown', function(e) {
+                    if (this.classList.contains(CLASS_NAME)) {
+                        this.classList.remove(CLASS_NAME);
+                        e.preventDefault();
+                    }
+                    if (e.clickEvent && e.clickEvent.composedPath().some(el => el.classList && el.classList.contains('dropdown-toggle'))) {
+                        e.preventDefault();
+                    }
+                    e.stopPropagation(); // do not need pop in multi level mode
+                });
+            });
+
+            // for hover
+            function getDropdown(element) {
+                return $bs.Dropdown.getInstance(element) || new $bs.Dropdown(element);
+            }
+
+            document.querySelectorAll('.dropdown-hover, .dropdown-hover-all .dropdown').forEach(function(dd) {
+                dd.addEventListener('mouseenter', function(e) {
+                    let toggle = e.target.querySelector(':scope>[data-bs-toggle="dropdown"]');
+                    if (!toggle.classList.contains('show')) {
+                        getDropdown(toggle).toggle();
+                    }
+                });
+                dd.addEventListener('mouseleave', function(e) {
+                    let toggle = e.target.querySelector(':scope>[data-bs-toggle="dropdown"]');
+                    if (toggle.classList.contains('show')) {
+                        getDropdown(toggle).toggle();
+                    }
+                });
+            });
+        })(bootstrap);
+    </script>
+</body>
+
+</html>
