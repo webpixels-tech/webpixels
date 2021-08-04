@@ -12,9 +12,18 @@
 </head>
 
 <body>
-    <div class="toggle">
+    <section class="navigation" id="side-navigation">
 
-    </div>
+        <ul class="list">
+            <li><a href="#"> Home</a></li>
+            <li><a href="#"> About Us</a></li>
+            <li><a href="#"> Services</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Downloads</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </section>
+    <div class="toggle" id="toggle"></div>
     <section class="hero">
         <div class="container">
             <div class="row">
@@ -28,6 +37,21 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        const toggle = document.getElementById("toggle");
+        const sideNavigation = document.getElementById("side-navigation");
+        toggle.addEventListener('click', function() {
+            toggle.classList.toggle('active');
+            sideNavigation.classList.toggle('active');
+        })
+
+        document.onclick = function(e) {
+            if (e.target.id !== 'sideNavigation' && e.target.id !== 'toggle') {
+                toggle.classList.remove('active');
+                sideNavigation.classList.remove('active');
+            }
+        }
+    </script>
 </body>
 
 </html>

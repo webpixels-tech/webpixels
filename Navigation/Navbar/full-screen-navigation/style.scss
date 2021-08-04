@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+// font-family: 'Quicksand', sans-serif;
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #0C6DFF;
@@ -30,7 +32,9 @@ body {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    box-shadow: -2px 0px 4px #fff;
+    box-shadow: 0px 0px 0px #fff;
+    transition: 0.2s;
+    cursor: pointer;
 }
 
 .toggle::before {
@@ -42,6 +46,7 @@ body {
     -webkit-transform: translateY(-8px);
     transform: translateY(-9px);
     box-shadow: 0px 9px 0 #fff;
+    transition: 0.2s;
 }
 
 .toggle::after {
@@ -52,4 +57,76 @@ body {
     background-color: #fff;
     -webkit-transform: translateY(8px);
     transform: translateY(9px);
+    transition: 0.2s;
+}
+
+.toggle.active::after {
+    transform: translateY(0px) rotate( -45deg);
+}
+
+.toggle.active::before {
+    transform: translateY(0px) rotate( 45deg);
+    box-shadow: none;
+}
+
+.toggle:hover,
+.toggle.active {
+    background-color: #ff4159;
+}
+
+.navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    min-height: 100vh;
+    overflow-y: auto;
+    background-color: #0D1117;
+    transform: translateX(-100%);
+}
+
+.navigation.active {
+    transition: all 0.6s cubic-bezier(0.6, 0.05, 0.4, 1);
+    transform: translateX(0);
+}
+
+.navigation .list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transform: translateY(100%);
+}
+
+.navigation.active .list {
+    transform: translateY(0);
+    transition-delay: 0.7s;
+    transition-duration: 0.5s;
+}
+
+.navigation .list li {
+    padding: 10px;
+}
+
+.navigation .list li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 2.7em;
+    font-weight: 300;
+    letter-spacing: 1px;
+    padding: 5px;
+}
+
+.navigation .list li a:hover {
+    background-color: #0066ff;
+}
+
+@media (max-width: 767px) {
+    .navigation .list li a {
+        font-size: 1.7em;
+    }
 }
