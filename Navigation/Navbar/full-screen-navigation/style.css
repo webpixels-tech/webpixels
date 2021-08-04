@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #0C6DFF;
+}
+
+.hero {
+  background-color: #D7DADB;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.toggle {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  background-color: #0066ff;
+  top: 20px;
+  left: 20px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-shadow: -2px 0px 4px #fff;
+          box-shadow: -2px 0px 4px #fff;
+}
+
+.toggle::before {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 1.5px;
+  background-color: #fff;
+  -webkit-transform: translateY(-8px);
+  transform: translateY(-9px);
+  -webkit-box-shadow: 0px 9px 0 #fff;
+          box-shadow: 0px 9px 0 #fff;
+}
+
+.toggle::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 1.5px;
+  background-color: #fff;
+  -webkit-transform: translateY(8px);
+  transform: translateY(9px);
+}
+/*# sourceMappingURL=style.css.map */
