@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Responsive Product Cards
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        .prod-cards {
+            margin: 50px auto;
+        }
+        
+        .prod-cards .wrap {
+            display: -ms-grid;
+            display: grid;
+            -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 20px;
+        }
+        
+        .prod-cards .card {
+            width: 100%;
+            background-color: #fff;
+            position: relative;
+        }
+        
+        .prod-cards .card .imgBox {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+        }
+        
+        .prod-cards .card .imgBox img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            -o-object-fit: cover;
+            object-fit: cover;
+            -webkit-transition: 0.5s ease-in-out;
+            transition: 0.5s ease-in-out;
+            -webkit-transform-origin: center;
+            transform-origin: center;
+        }
+        
+        .prod-cards .card:hover .imgBox img {
+            -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+        }
+        
+        .prod-cards .card .content {
+            padding: 10px;
+        }
+        
+        .prod-cards .card .content .name h3 {
+            font-size: 18px;
+            font-weight: 500;
+            color: #000;
+            margin: 5px 0 10px;
+        }
+        
+        .prod-cards .card .content .price-rating {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+        
+        .prod-cards .card .content .price-rating .price {
+            font-size: 18px;
+            color: #ff4159;
+            font-weight: 500;
+            margin: 0;
+        }
+        
+        .prod-cards .card .content .price-rating i {
+            color: #ffd513;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        
+        .prod-cards .card .content .price-rating i.grey {
+            color: #ccc;
+        }
+        
+        .prod-cards .card .action {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        
+        .prod-cards .card .action li {
+            position: relative;
+            list-style-type: none;
+            width: 40px;
+            height: 40px;
+            background-color: #fff;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            margin: 4px;
+            cursor: pointer;
+            -webkit-transform: translateX(60px);
+            transform: translateX(60px);
+            -webkit-transition: -webkit-transform 0.5s;
+            transition: -webkit-transform 0.5s;
+            transition: transform 0.5s;
+            transition: transform 0.5s, -webkit-transform 0.5s;
+        }
+        
+        .prod-cards .card .action li span {
+            position: absolute;
+            right: 45px;
+            top: 50%;
+            -webkit-transform: translateY(-50%) translateX(-20px);
+            transform: translateY(-50%) translateX(-20px);
+            white-space: nowrap;
+            padding: 4px 10px;
+            background-color: #fff;
+            color: #333;
+            font-weight: 500;
+            font-size: 12px;
+            border-radius: 4px;
+            pointer-events: none;
+            width: -webkit-fit-content;
+            width: -moz-fit-content;
+            width: fit-content;
+            visibility: hidden;
+            opacity: 0;
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+        }
+        
+        .prod-cards .card .action li:hover {
+            background-color: #ff4159;
+            color: #fff;
+        }
+        
+        .prod-cards .card .action li:hover span {
+            visibility: visible;
+            opacity: 1;
+            -webkit-transform: translateY(-50%) translateX(0px);
+            transform: translateY(-50%) translateX(0px);
+        }
+        
+        .prod-cards .card .action li:hover span::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -4px;
+            width: 8px;
+            height: 8px;
+            background-color: #fff;
+            -webkit-transform: translateY(-50%) rotate(45deg);
+            transform: translateY(-50%) rotate(45deg);
+        }
+        
+        .prod-cards .card .action li:nth-child(2) {
+            -webkit-transition-delay: 0.15s;
+            transition-delay: 0.15s;
+        }
+        
+        .prod-cards .card .action li:nth-child(3) {
+            -webkit-transition-delay: 0.30s;
+            transition-delay: 0.30s;
+        }
+        
+        .prod-cards .card:hover .action li {
+            -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+        }
+        /*# sourceMappingURL=style.css.map */
+    </style>
+
+    <body>
+        <section class="prod-cards">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="wrap">
+                            <div class="card">
+                                <div class="imgBox">
+                                    <img src="images/1.jpg" class="img-fluid">
+                                    <ul class="action">
+                                        <li>
+                                            <i class="fa fa-heart" aria-hidden="true"></i>
+                                            <span>Add to wishlist</span>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                            <span>Add to cart</span>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-eye" aria-hidden="true"></i>
+                                            <span>View details</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="content">
+                                    <div class="name">
+                                        <h3>Raymond Jeans</h3>
+                                    </div>
+                                    <div class="price-rating">
+                                        <h2 class="price">$13.45</h2>
+                                        <div class="rating">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star grey" aria-hidden="true"></i>
+                                            <i class="fa fa-star grey" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="imgBox">
+                                    <img src="images/2.jpg" class="img-fluid">
+                                    <ul class="action">
+                                        <li>
+                                            <i class="fa fa-heart" aria-hidden="true"></i>
+                                            <span>Add to wishlist</span>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                            <span>Add to cart</span>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-eye" aria-hidden="true"></i>
+                                            <span>View details</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="content">
+                                    <div class="name">
+                                        <h3>Raymond Jeans</h3>
+                                    </div>
+                                    <div class="price-rating">
+                                        <h2 class="price">$13.45</h2>
+                                        <div class="rating">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star grey" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="imgBox">
+                                    <img src="images/3.jpg" class="img-fluid">
+                                    <ul class="action">
+                                        <li>
+                                            <i class="fa fa-heart" aria-hidden="true"></i>
+                                            <span>Add to wishlist</span>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                            <span>Add to cart</span>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-eye" aria-hidden="true"></i>
+                                            <span>View details</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="content">
+                                    <div class="name">
+                                        <h3>Raymond Jeans</h3>
+                                    </div>
+                                    <div class="price-rating">
+                                        <h2 class="price">$13.45</h2>
+                                        <div class="rating">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star grey" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="imgBox">
+                                    <img src="images/4.jpg" class="img-fluid">
+                                    <ul class="action">
+                                        <li>
+                                            <i class="fa fa-heart" aria-hidden="true"></i>
+                                            <span>Add to wishlist</span>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                            <span>Add to cart</span>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-eye" aria-hidden="true"></i>
+                                            <span>View details</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="content">
+                                    <div class="name">
+                                        <h3>Raymond Jeans</h3>
+                                    </div>
+                                    <div class="price-rating">
+                                        <h2 class="price">$13.45</h2>
+                                        <div class="rating">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star grey" aria-hidden="true"></i>
+                                            <i class="fa fa-star grey" aria-hidden="true"></i>
+                                            <i class="fa fa-star grey" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="imgBox">
+                                    <img src="images/5.jpg" class="img-fluid">
+                                    <ul class="action">
+                                        <li>
+                                            <i class="fa fa-heart" aria-hidden="true"></i>
+                                            <span>Add to wishlist</span>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                            <span>Add to cart</span>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-eye" aria-hidden="true"></i>
+                                            <span>View details</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="content">
+                                    <div class="name">
+                                        <h3>Raymond Jeans</h3>
+                                    </div>
+                                    <div class="price-rating">
+                                        <h2 class="price">$13.45</h2>
+                                        <div class="rating">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star grey" aria-hidden="true"></i>
+                                            <i class="fa fa-star grey" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="imgBox">
+                                    <img src="images/6.jpg" class="img-fluid">
+                                    <ul class="action">
+                                        <li>
+                                            <i class="fa fa-heart" aria-hidden="true"></i>
+                                            <span>Add to wishlist</span>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                            <span>Add to cart</span>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-eye" aria-hidden="true"></i>
+                                            <span>View details</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="content">
+                                    <div class="name">
+                                        <h3>Raymond Jeans</h3>
+                                    </div>
+                                    <div class="price-rating">
+                                        <h2 class="price">$13.45</h2>
+                                        <div class="rating">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star grey" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="imgBox">
+                                    <img src="images/7.jpg" class="img-fluid">
+                                    <ul class="action">
+                                        <li>
+                                            <i class="fa fa-heart" aria-hidden="true"></i>
+                                            <span>Add to wishlist</span>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                            <span>Add to cart</span>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-eye" aria-hidden="true"></i>
+                                            <span>View details</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="content">
+                                    <div class="name">
+                                        <h3>Raymond Jeans</h3>
+                                    </div>
+                                    <div class="price-rating">
+                                        <h2 class="price">$13.45</h2>
+                                        <div class="rating">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="imgBox">
+                                    <img src="images/8.jpg" class="img-fluid">
+                                    <ul class="action">
+                                        <li>
+                                            <i class="fa fa-heart" aria-hidden="true"></i>
+                                            <span>Add to wishlist</span>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                            <span>Add to cart</span>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-eye" aria-hidden="true"></i>
+                                            <span>View details</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="content">
+                                    <div class="name">
+                                        <h3>Raymond Jeans</h3>
+                                    </div>
+                                    <div class="price-rating">
+                                        <h2 class="price">$13.45</h2>
+                                        <div class="rating">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="https://kit.fontawesome.com/d17dd9fe1a.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js "></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js "></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js "></script>
+    </body>
+
+</html>
