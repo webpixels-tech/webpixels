@@ -1,0 +1,197 @@
+:root {
+  --primary-color: #2a3042;
+  --page-bg-color: #f8f8fb;
+}
+
+body {
+  background-color: var(--page-bg-color);
+}
+
+/* Topbar */
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  min-height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0 0.75rem 1.5rem #12263f08;
+          box-shadow: 0 0.75rem 1.5rem #12263f08;
+  z-index: 99;
+}
+
+.topbar .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.topbar .left .navbar-brand {
+  background: #2a3042;
+  width: 250px;
+  min-height: 70px;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.topbar .left .navbar-brand img {
+  width: 90px;
+}
+
+.topbar .left .navbar-brand .logo-icon {
+  display: none;
+}
+
+.topbar .left .navbar-brand .logo-icon img {
+  width: 30px;
+}
+
+.topbar .left .toggle {
+  margin: 0 23px;
+  cursor: pointer;
+}
+
+.topbar .left .search-wrap {
+  position: relative;
+  width: 250px;
+}
+
+.topbar .left .search-wrap input {
+  background-color: #f3f3f9;
+  border: 0;
+  border-bottom: 30px;
+  padding-left: 35px;
+  border-radius: 41px;
+}
+
+.topbar .left .search-wrap i {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.topbar .right .account {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.topbar .right .account i {
+  font-size: 12px;
+  padding: 7px;
+  margin-top: 5px;
+}
+
+.topbar .right .user-avatar {
+  width: 45px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+.topbar .right .user-avatar img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
+.topbar.active .navbar-brand {
+  width: 75px;
+}
+
+.topbar.active .navbar-brand .logo {
+  display: none;
+}
+
+.topbar.active .navbar-brand .logo-icon {
+  display: block;
+}
+
+.sidebar {
+  background-color: var(--primary-color);
+  width: 250px;
+  height: 100vh;
+  overflow-y: auto;
+  position: fixed;
+  top: 70px;
+  padding: 20px 20px 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 13px 0;
+  white-space: nowrap;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+}
+
+.sidebar ul li a .icon {
+  margin-right: 10px;
+}
+
+.sidebar ul li a .icon,
+.sidebar ul li a .title {
+  color: #a6b0cf;
+}
+
+.sidebar.active {
+  width: 75px;
+}
+
+.sidebar.active .title {
+  visibility: hidden;
+  opacity: 0;
+}
+
+main {
+  min-height: 100vh;
+  top: 70px;
+  width: calc(100% - 250px);
+  background-color: #f0f0f0;
+  position: absolute;
+  left: 250px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+main.active {
+  width: calc(100% - 75px);
+  left: 75px;
+}
+/*# sourceMappingURL=style.css.map */
