@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 :root {
   --primary-color: #2a3042;
   --page-bg-color: #f8f8fb;
@@ -5,6 +6,7 @@
 
 body {
   background-color: var(--page-bg-color);
+  font-family: 'Roboto', sans-serif;
 }
 
 /* Topbar */
@@ -188,10 +190,63 @@ main {
   left: 250px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  padding: 20px;
 }
 
 main.active {
   width: calc(100% - 75px);
   left: 75px;
+}
+
+main .page-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.card {
+  padding: 20px;
+}
+
+.dashboard .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.dashboard .card .number {
+  margin-bottom: 2px;
+}
+
+.dashboard .card p {
+  margin-bottom: 0px;
+}
+
+.dashboard .card .icon i {
+  font-size: 40px;
+  color: var(--primary-color);
+}
+
+main .main-wrap {
+  background-color: #fff;
+  padding: 20px;
+}
+
+table thead {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+table tr td {
+  font-size: 14px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 :root {
     --primary-color: #2a3042;
     --page-bg-color: #f8f8fb;
@@ -5,6 +6,7 @@
 
 body {
     background-color: var(--page-bg-color);
+    font-family: 'Roboto', sans-serif;
 }
 
 
@@ -146,8 +148,55 @@ main {
     position: absolute;
     left: 250px;
     transition: 0.5s;
+    padding: 20px;
     &.active {
         width: calc(100% - 75px);
         left: 75px;
+    }
+    .page-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+}
+
+.card {
+    padding: 20px;
+}
+
+.dashboard {
+    .card {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        .number {
+            margin-bottom: 2px;
+        }
+        p {
+            margin-bottom: 0px;
+        }
+        .icon i {
+            font-size: 40px;
+            color: var(--primary-color);
+        }
+    }
+}
+
+main {
+    .main-wrap {
+        background-color: #fff;
+        padding: 20px;
+    }
+}
+
+table {
+    thead {
+        background-color: var(--primary-color);
+        color: #fff;
+    }
+    tr {
+        td {
+            font-size: 14px;
+        }
     }
 }
