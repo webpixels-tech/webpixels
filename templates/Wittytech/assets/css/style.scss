@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
-@import "_variables";
+$primary-color: #3fbf82;
+$secondary-color: #fc8240;
+$text-red: #e93b1f;
+$primary-font: 'IBM Plex Sans' sans-serif;
+$background-color: #151515;
+$linear-gradient: linear-gradient(to bottom,
+#e93b1f,
+#fc8240);
 body {
     font-family: 'IBM Plex Sans', sans-serif;
     background-color: #0D1117;
@@ -31,7 +38,7 @@ a {
 }
 
 a:hover {
-    color: #cf662d;
+    color: $secondary-color;
 }
 
 .ml-auto {
@@ -53,11 +60,12 @@ a:hover {
 .fixed-top {
     background-color: #0d1117;
     padding: 15px 0px;
+    border-bottom: 1px solid #ffffff0d;
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    background-image: url('/assets/images/right-arrow.png');
+    background-image: url('../images/right-arrow.png');
 }
 
 .carousel-control-prev {
@@ -70,8 +78,8 @@ a:hover {
 }
 
 .sec-heading {
-    color: #4ae69c;
-    color: #cf662d;
+    color: $primary-color;
+    color: $secondary-color;
     text-align: center;
     margin-bottom: 50px;
     position: relative;
@@ -84,7 +92,7 @@ a:hover {
         bottom: -15px;
         left: 50%;
         width: 10%;
-        background-color: #cf662d;
+        background-color: $secondary-color;
         height: 3px;
         transform: translateX(-50%);
     }
@@ -119,7 +127,7 @@ a:hover {
     align-items: center;
     margin: 30px auto;
     &:hover {
-        background-color: #48c187;
+        background-color: $primary-color;
         background-image: none;
     }
 }
@@ -245,11 +253,11 @@ header #toggle.active::after {
             margin-bottom: 30px;
         }
         p {
-            color: #4ae69c;
+            color: $primary-color;
         }
         &:hover {
             background-color: #000;
-            border-bottom-color: #fa7d3e;
+            border-bottom-color: $secondary-color;
         }
     }
 }
@@ -270,7 +278,7 @@ header #toggle.active::after {
         }
         h4 {
             font-size: 24px;
-            color: #4ae69c;
+            color: $primary-color;
             margin-bottom: 10px;
             max-width: 200px;
             line-height: 30px;
@@ -278,11 +286,16 @@ header #toggle.active::after {
         p {
             max-width: 250px;
         }
+        &:hover {
+            h4 {
+                color: $secondary-color;
+            }
+        }
     }
 }
 
 .community {
-    background-image: url(/assets/images/banner-test.jpg);
+    background-image: url(../images/banner-test.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -313,6 +326,7 @@ header #toggle.active::after {
     .wrap {
         max-width: 500px;
         margin-bottom: 50px;
+        border-bottom: 1px solid #282828;
     }
     img {
         max-height: 400px;
@@ -378,7 +392,7 @@ header #toggle.active::after {
 }
 
 .accordion-button::after {
-    background-image: url(/assets/images/arrow.svg) !important;
+    background-image: url(../images/arrow.svg) !important;
 }
 
 .contact {
@@ -392,6 +406,9 @@ header #toggle.active::after {
         margin: auto;
         min-height: 259px;
         margin-bottom: 30px;
+        &:hover {
+            border-color: $secondary-color;
+        }
     }
 }
 
@@ -415,6 +432,38 @@ footer {
         color: #ffffff57;
         text-align: center;
         font-size: 15px;
+    }
+}
+
+#scroll {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff1a;
+    text-indent: -9999px;
+    display: none;
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    border-radius: 60px;
+    span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -8px;
+        margin-top: -12px;
+        height: 0;
+        width: 0;
+        border: 8px solid transparent;
+        border-bottom-color: #ffffff;
+    }
+    &:hover {
+        background-color: $secondary-color;
+        opacity: 1;
+        filter: "alpha(opacity=100)";
+        -ms-filter: "alpha(opacity=100)";
     }
 }
 
